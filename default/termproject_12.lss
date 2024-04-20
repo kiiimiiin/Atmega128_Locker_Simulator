@@ -1,0 +1,2948 @@
+
+termproject_12.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000032a  00800100  0000150e  000015a2  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000150e  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          000000c1  0080042a  0080042a  000018cc  2**0
+                  ALLOC
+  3 .debug_aranges 00000020  00000000  00000000  000018cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 000003fc  00000000  00000000  000018ec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000006e0  00000000  00000000  00001ce8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000012f  00000000  00000000  000023c8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000b68  00000000  00000000  000024f7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000e0  00000000  00000000  00003060  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000035e  00000000  00000000  00003140  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+       4:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+       8:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+       c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      10:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      14:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      18:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      1c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      20:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      24:	0c 94 d4 08 	jmp	0x11a8	; 0x11a8 <__vector_9>
+      28:	0c 94 09 09 	jmp	0x1212	; 0x1212 <__vector_10>
+      2c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      30:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      34:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      38:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      3c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      40:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      44:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      48:	0c 94 9e 08 	jmp	0x113c	; 0x113c <__vector_18>
+      4c:	0c 94 a8 02 	jmp	0x550	; 0x550 <__vector_19>
+      50:	0c 94 6f 08 	jmp	0x10de	; 0x10de <__vector_20>
+      54:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      58:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      5c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      60:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      64:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      68:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      6c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      70:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      74:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      78:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      7c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      80:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      84:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+      88:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+
+0000008c <__ctors_end>:
+      8c:	11 24       	eor	r1, r1
+      8e:	1f be       	out	0x3f, r1	; 63
+      90:	cf ef       	ldi	r28, 0xFF	; 255
+      92:	d0 e1       	ldi	r29, 0x10	; 16
+      94:	de bf       	out	0x3e, r29	; 62
+      96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+      98:	14 e0       	ldi	r17, 0x04	; 4
+      9a:	a0 e0       	ldi	r26, 0x00	; 0
+      9c:	b1 e0       	ldi	r27, 0x01	; 1
+      9e:	ee e0       	ldi	r30, 0x0E	; 14
+      a0:	f5 e1       	ldi	r31, 0x15	; 21
+      a2:	00 e0       	ldi	r16, 0x00	; 0
+      a4:	0b bf       	out	0x3b, r16	; 59
+      a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+      a8:	07 90       	elpm	r0, Z+
+      aa:	0d 92       	st	X+, r0
+      ac:	aa 32       	cpi	r26, 0x2A	; 42
+      ae:	b1 07       	cpc	r27, r17
+      b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+      b2:	1b be       	out	0x3b, r1	; 59
+
+000000b4 <__do_clear_bss>:
+      b4:	14 e0       	ldi	r17, 0x04	; 4
+      b6:	aa e2       	ldi	r26, 0x2A	; 42
+      b8:	b4 e0       	ldi	r27, 0x04	; 4
+      ba:	01 c0       	rjmp	.+2      	; 0xbe <.do_clear_bss_start>
+
+000000bc <.do_clear_bss_loop>:
+      bc:	1d 92       	st	X+, r1
+
+000000be <.do_clear_bss_start>:
+      be:	ab 3e       	cpi	r26, 0xEB	; 235
+      c0:	b1 07       	cpc	r27, r17
+      c2:	e1 f7       	brne	.-8      	; 0xbc <.do_clear_bss_loop>
+      c4:	0e 94 68 00 	call	0xd0	; 0xd0 <main>
+      c8:	0c 94 85 0a 	jmp	0x150a	; 0x150a <_exit>
+
+000000cc <__bad_interrupt>:
+      cc:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000d0 <main>:
+//  현재 어떤 mode인지에 따라 출력/수신의 경우를 나누었다.
+//  비밀번호 찾기, 보관 , 관리자모드 모두 비밀번호 입력 행위를 하므로
+//  비밀번호 입력 모드로 비밀번호 입력 관련 행위를 하고 있는지 구분하였다.
+// -------------------------------------
+int main(void)
+{
+      d0:	df 93       	push	r29
+      d2:	cf 93       	push	r28
+      d4:	00 d0       	rcall	.+0      	; 0xd6 <main+0x6>
+      d6:	00 d0       	rcall	.+0      	; 0xd8 <main+0x8>
+      d8:	cd b7       	in	r28, 0x3d	; 61
+      da:	de b7       	in	r29, 0x3e	; 62
+	cpu_init();
+      dc:	0e 94 28 02 	call	0x450	; 0x450 <cpu_init>
+	usart01_setup(); // UCSR0B = 0xF8
+      e0:	0e 94 7d 02 	call	0x4fa	; 0x4fa <usart01_setup>
+	timer_counter2_setup();
+      e4:	0e 94 33 0a 	call	0x1466	; 0x1466 <timer_counter2_setup>
+	usart0_tx_menu = 1;
+      e8:	81 e0       	ldi	r24, 0x01	; 1
+      ea:	80 93 2a 04 	sts	0x042A, r24
+	int locker_num, one_digit;
+	
+	while(1)
+	{ 
+		if(usart0_tx_menu) // 메뉴 문자열 출력
+      ee:	80 91 2a 04 	lds	r24, 0x042A
+      f2:	88 23       	and	r24, r24
+      f4:	49 f0       	breq	.+18     	; 0x108 <main+0x38>
+		{
+			set_mode(MENU_MODE);
+      f6:	80 e0       	ldi	r24, 0x00	; 0
+      f8:	0e 94 3e 09 	call	0x127c	; 0x127c <set_mode>
+			UCSR0B = 0xF8; // UDRE interrupt enable ( 연속 송신 O ) 문자열 끝에 도달했을 때 disable ( 연속 송신 X )  
+      fc:	ea e2       	ldi	r30, 0x2A	; 42
+      fe:	f0 e0       	ldi	r31, 0x00	; 0
+     100:	88 ef       	ldi	r24, 0xF8	; 248
+     102:	80 83       	st	Z, r24
+			usart0_tx_menu = 0;
+     104:	10 92 2a 04 	sts	0x042A, r1
+		}
+		if(usart0_tx_keep) // 보관 문자열 출력
+     108:	80 91 2c 04 	lds	r24, 0x042C
+     10c:	88 23       	and	r24, r24
+     10e:	49 f0       	breq	.+18     	; 0x122 <main+0x52>
+		{
+			set_mode(KEEP_MODE);
+     110:	81 e0       	ldi	r24, 0x01	; 1
+     112:	0e 94 3e 09 	call	0x127c	; 0x127c <set_mode>
+			UCSR0B = 0xF8;
+     116:	ea e2       	ldi	r30, 0x2A	; 42
+     118:	f0 e0       	ldi	r31, 0x00	; 0
+     11a:	88 ef       	ldi	r24, 0xF8	; 248
+     11c:	80 83       	st	Z, r24
+			usart0_tx_keep = 0;
+     11e:	10 92 2c 04 	sts	0x042C, r1
+		}
+		if(usart0_tx_find) // 찾기 문자열 출력
+     122:	80 91 2d 04 	lds	r24, 0x042D
+     126:	88 23       	and	r24, r24
+     128:	49 f0       	breq	.+18     	; 0x13c <main+0x6c>
+		{
+			set_mode(FIND_MODE);
+     12a:	82 e0       	ldi	r24, 0x02	; 2
+     12c:	0e 94 3e 09 	call	0x127c	; 0x127c <set_mode>
+			UCSR0B = 0xF8;
+     130:	ea e2       	ldi	r30, 0x2A	; 42
+     132:	f0 e0       	ldi	r31, 0x00	; 0
+     134:	88 ef       	ldi	r24, 0xF8	; 248
+     136:	80 83       	st	Z, r24
+			usart0_tx_find = 0;
+     138:	10 92 2d 04 	sts	0x042D, r1
+		}
+		if(usart0_tx_manager) // 관리자 모드 문자열 출력
+     13c:	80 91 2e 04 	lds	r24, 0x042E
+     140:	88 23       	and	r24, r24
+     142:	49 f0       	breq	.+18     	; 0x156 <main+0x86>
+		{
+			set_mode(MANAGER_MODE);
+     144:	83 e0       	ldi	r24, 0x03	; 3
+     146:	0e 94 3e 09 	call	0x127c	; 0x127c <set_mode>
+			UCSR0B = 0xF8;
+     14a:	ea e2       	ldi	r30, 0x2A	; 42
+     14c:	f0 e0       	ldi	r31, 0x00	; 0
+     14e:	88 ef       	ldi	r24, 0xF8	; 248
+     150:	80 83       	st	Z, r24
+			usart0_tx_manager = 0;
+     152:	10 92 2e 04 	sts	0x042E, r1
+		}
+		if(usart0_tx_enterpass) // 비밀번호 입력 관련 문자열 출력
+     156:	80 91 30 04 	lds	r24, 0x0430
+     15a:	88 23       	and	r24, r24
+     15c:	49 f0       	breq	.+18     	; 0x170 <main+0xa0>
+		{
+			enterpass_mode = 1;
+     15e:	81 e0       	ldi	r24, 0x01	; 1
+     160:	80 93 36 04 	sts	0x0436, r24
+			UCSR0B = 0xF8;
+     164:	ea e2       	ldi	r30, 0x2A	; 42
+     166:	f0 e0       	ldi	r31, 0x00	; 0
+     168:	88 ef       	ldi	r24, 0xF8	; 248
+     16a:	80 83       	st	Z, r24
+			usart0_tx_enterpass = 0;
+     16c:	10 92 30 04 	sts	0x0430, r1
+		}
+		if(usart0_rx_eflg) 
+     170:	80 91 2b 04 	lds	r24, 0x042B
+     174:	88 23       	and	r24, r24
+     176:	09 f4       	brne	.+2      	; 0x17a <main+0xaa>
+     178:	60 c1       	rjmp	.+704    	; 0x43a <main+0x36a>
+		{
+			if(menu_mode) // 메뉴모드 관련 수신
+     17a:	80 91 31 04 	lds	r24, 0x0431
+     17e:	88 23       	and	r24, r24
+     180:	c9 f0       	breq	.+50     	; 0x1b4 <main+0xe4>
+			{
+				if(usart0_rx_data == '1')	usart0_tx_keep = 1;
+     182:	80 91 53 04 	lds	r24, 0x0453
+     186:	81 33       	cpi	r24, 0x31	; 49
+     188:	21 f4       	brne	.+8      	; 0x192 <main+0xc2>
+     18a:	81 e0       	ldi	r24, 0x01	; 1
+     18c:	80 93 2c 04 	sts	0x042C, r24
+     190:	52 c1       	rjmp	.+676    	; 0x436 <main+0x366>
+				else if(usart0_rx_data == '2')	usart0_tx_find = 1;
+     192:	80 91 53 04 	lds	r24, 0x0453
+     196:	82 33       	cpi	r24, 0x32	; 50
+     198:	21 f4       	brne	.+8      	; 0x1a2 <main+0xd2>
+     19a:	81 e0       	ldi	r24, 0x01	; 1
+     19c:	80 93 2d 04 	sts	0x042D, r24
+     1a0:	4a c1       	rjmp	.+660    	; 0x436 <main+0x366>
+				else if(usart0_rx_data == '3')	usart0_tx_manager = 1;	 
+     1a2:	80 91 53 04 	lds	r24, 0x0453
+     1a6:	83 33       	cpi	r24, 0x33	; 51
+     1a8:	09 f0       	breq	.+2      	; 0x1ac <main+0xdc>
+     1aa:	45 c1       	rjmp	.+650    	; 0x436 <main+0x366>
+     1ac:	81 e0       	ldi	r24, 0x01	; 1
+     1ae:	80 93 2e 04 	sts	0x042E, r24
+     1b2:	41 c1       	rjmp	.+642    	; 0x436 <main+0x366>
+			}
+			else if(!enterpass_mode) // 보관,찾기, 관리자모드 사물함 선택 수신
+     1b4:	80 91 36 04 	lds	r24, 0x0436
+     1b8:	88 23       	and	r24, r24
+     1ba:	09 f0       	breq	.+2      	; 0x1be <main+0xee>
+     1bc:	5f c0       	rjmp	.+190    	; 0x27c <main+0x1ac>
+			{
+				locker_num = usart0_rx_data - 48; // 입력받은 문자로서의 숫자를 정수로서의 숫자로 판별 ( 0(48) ~ 9(57) )
+     1be:	80 91 53 04 	lds	r24, 0x0453
+     1c2:	88 2f       	mov	r24, r24
+     1c4:	90 e0       	ldi	r25, 0x00	; 0
+     1c6:	c0 97       	sbiw	r24, 0x30	; 48
+     1c8:	9c 83       	std	Y+4, r25	; 0x04
+     1ca:	8b 83       	std	Y+3, r24	; 0x03
+				if(locker_num >= 1 && locker_num <= 9 )
+     1cc:	8b 81       	ldd	r24, Y+3	; 0x03
+     1ce:	9c 81       	ldd	r25, Y+4	; 0x04
+     1d0:	18 16       	cp	r1, r24
+     1d2:	19 06       	cpc	r1, r25
+     1d4:	0c f0       	brlt	.+2      	; 0x1d8 <main+0x108>
+     1d6:	42 c0       	rjmp	.+132    	; 0x25c <main+0x18c>
+     1d8:	8b 81       	ldd	r24, Y+3	; 0x03
+     1da:	9c 81       	ldd	r25, Y+4	; 0x04
+     1dc:	8a 30       	cpi	r24, 0x0A	; 10
+     1de:	91 05       	cpc	r25, r1
+     1e0:	ec f5       	brge	.+122    	; 0x25c <main+0x18c>
+				{
+					if((locker_usage[locker_num] == 0 && keep_mode) || (locker_usage[locker_num] == 1 && find_mode) || (locker_usage[locker_num] == 2 && manager_mode))
+     1e2:	8b 81       	ldd	r24, Y+3	; 0x03
+     1e4:	9c 81       	ldd	r25, Y+4	; 0x04
+     1e6:	fc 01       	movw	r30, r24
+     1e8:	e1 5e       	subi	r30, 0xE1	; 225
+     1ea:	fb 4f       	sbci	r31, 0xFB	; 251
+     1ec:	80 81       	ld	r24, Z
+     1ee:	88 23       	and	r24, r24
+     1f0:	21 f4       	brne	.+8      	; 0x1fa <main+0x12a>
+     1f2:	80 91 33 04 	lds	r24, 0x0433
+     1f6:	88 23       	and	r24, r24
+     1f8:	d1 f4       	brne	.+52     	; 0x22e <main+0x15e>
+     1fa:	8b 81       	ldd	r24, Y+3	; 0x03
+     1fc:	9c 81       	ldd	r25, Y+4	; 0x04
+     1fe:	fc 01       	movw	r30, r24
+     200:	e1 5e       	subi	r30, 0xE1	; 225
+     202:	fb 4f       	sbci	r31, 0xFB	; 251
+     204:	80 81       	ld	r24, Z
+     206:	81 30       	cpi	r24, 0x01	; 1
+     208:	21 f4       	brne	.+8      	; 0x212 <main+0x142>
+     20a:	80 91 34 04 	lds	r24, 0x0434
+     20e:	88 23       	and	r24, r24
+     210:	71 f4       	brne	.+28     	; 0x22e <main+0x15e>
+     212:	8b 81       	ldd	r24, Y+3	; 0x03
+     214:	9c 81       	ldd	r25, Y+4	; 0x04
+     216:	fc 01       	movw	r30, r24
+     218:	e1 5e       	subi	r30, 0xE1	; 225
+     21a:	fb 4f       	sbci	r31, 0xFB	; 251
+     21c:	80 81       	ld	r24, Z
+     21e:	82 30       	cpi	r24, 0x02	; 2
+     220:	09 f0       	breq	.+2      	; 0x224 <main+0x154>
+     222:	09 c1       	rjmp	.+530    	; 0x436 <main+0x366>
+     224:	80 91 35 04 	lds	r24, 0x0435
+     228:	88 23       	and	r24, r24
+     22a:	09 f4       	brne	.+2      	; 0x22e <main+0x15e>
+     22c:	04 c1       	rjmp	.+520    	; 0x436 <main+0x366>
+					{
+						UDR0 = '\n'; 
+     22e:	ec e2       	ldi	r30, 0x2C	; 44
+     230:	f0 e0       	ldi	r31, 0x00	; 0
+     232:	8a e0       	ldi	r24, 0x0A	; 10
+     234:	80 83       	st	Z, r24
+						selected_locker = locker_num; // 선택한 사물함 번호 저장
+     236:	8b 81       	ldd	r24, Y+3	; 0x03
+     238:	80 93 54 04 	sts	0x0454, r24
+						if(keep_mode || find_mode)	usart0_tx_enterpass = 1; // 비밀번호 입력 관련 문자열 출력
+     23c:	80 91 33 04 	lds	r24, 0x0433
+     240:	88 23       	and	r24, r24
+     242:	21 f4       	brne	.+8      	; 0x24c <main+0x17c>
+     244:	80 91 34 04 	lds	r24, 0x0434
+     248:	88 23       	and	r24, r24
+     24a:	21 f0       	breq	.+8      	; 0x254 <main+0x184>
+     24c:	81 e0       	ldi	r24, 0x01	; 1
+     24e:	80 93 30 04 	sts	0x0430, r24
+     252:	f1 c0       	rjmp	.+482    	; 0x436 <main+0x366>
+						else	usart0_tx_manager = 1;
+     254:	81 e0       	ldi	r24, 0x01	; 1
+     256:	80 93 2e 04 	sts	0x042E, r24
+     25a:	ed c0       	rjmp	.+474    	; 0x436 <main+0x366>
+					}
+				}
+				else if(usart0_rx_data == ' ') // SPACE 입력
+     25c:	80 91 53 04 	lds	r24, 0x0453
+     260:	80 32       	cpi	r24, 0x20	; 32
+     262:	09 f0       	breq	.+2      	; 0x266 <main+0x196>
+     264:	e8 c0       	rjmp	.+464    	; 0x436 <main+0x366>
+				{
+					usart0_tx_menu = 1;
+     266:	81 e0       	ldi	r24, 0x01	; 1
+     268:	80 93 2a 04 	sts	0x042A, r24
+					if(manager_mode) manager_password_idx = 0;
+     26c:	80 91 35 04 	lds	r24, 0x0435
+     270:	88 23       	and	r24, r24
+     272:	09 f4       	brne	.+2      	; 0x276 <main+0x1a6>
+     274:	e0 c0       	rjmp	.+448    	; 0x436 <main+0x366>
+     276:	10 92 38 04 	sts	0x0438, r1
+     27a:	dd c0       	rjmp	.+442    	; 0x436 <main+0x366>
+				}
+			}
+			else if(enterpass_mode) // 보관, 찾기 , 관리자 모드 비밀번호 수신
+     27c:	80 91 36 04 	lds	r24, 0x0436
+     280:	88 23       	and	r24, r24
+     282:	09 f4       	brne	.+2      	; 0x286 <main+0x1b6>
+     284:	d8 c0       	rjmp	.+432    	; 0x436 <main+0x366>
+			{
+				one_digit = usart0_rx_data - 48;
+     286:	80 91 53 04 	lds	r24, 0x0453
+     28a:	88 2f       	mov	r24, r24
+     28c:	90 e0       	ldi	r25, 0x00	; 0
+     28e:	c0 97       	sbiw	r24, 0x30	; 48
+     290:	9a 83       	std	Y+2, r25	; 0x02
+     292:	89 83       	std	Y+1, r24	; 0x01
+				if(one_digit >= 0 && one_digit <= 9 )
+     294:	89 81       	ldd	r24, Y+1	; 0x01
+     296:	9a 81       	ldd	r25, Y+2	; 0x02
+     298:	99 23       	and	r25, r25
+     29a:	0c f4       	brge	.+2      	; 0x29e <main+0x1ce>
+     29c:	86 c0       	rjmp	.+268    	; 0x3aa <main+0x2da>
+     29e:	89 81       	ldd	r24, Y+1	; 0x01
+     2a0:	9a 81       	ldd	r25, Y+2	; 0x02
+     2a2:	8a 30       	cpi	r24, 0x0A	; 10
+     2a4:	91 05       	cpc	r25, r1
+     2a6:	0c f0       	brlt	.+2      	; 0x2aa <main+0x1da>
+     2a8:	80 c0       	rjmp	.+256    	; 0x3aa <main+0x2da>
+				{
+					if(keep_mode) // 보관모드
+     2aa:	80 91 33 04 	lds	r24, 0x0433
+     2ae:	88 23       	and	r24, r24
+     2b0:	41 f1       	breq	.+80     	; 0x302 <main+0x232>
+					{
+						locker_password[selected_locker][password_idx++] = one_digit; // 선택한 사물함의 비밀번호 저장
+     2b2:	80 91 54 04 	lds	r24, 0x0454
+     2b6:	28 2f       	mov	r18, r24
+     2b8:	30 e0       	ldi	r19, 0x00	; 0
+     2ba:	60 91 37 04 	lds	r22, 0x0437
+     2be:	46 2f       	mov	r20, r22
+     2c0:	50 e0       	ldi	r21, 0x00	; 0
+     2c2:	79 81       	ldd	r23, Y+1	; 0x01
+     2c4:	c9 01       	movw	r24, r18
+     2c6:	88 0f       	add	r24, r24
+     2c8:	99 1f       	adc	r25, r25
+     2ca:	82 0f       	add	r24, r18
+     2cc:	93 1f       	adc	r25, r19
+     2ce:	88 0f       	add	r24, r24
+     2d0:	99 1f       	adc	r25, r25
+     2d2:	84 0f       	add	r24, r20
+     2d4:	95 1f       	adc	r25, r21
+     2d6:	fc 01       	movw	r30, r24
+     2d8:	ef 56       	subi	r30, 0x6F	; 111
+     2da:	fb 4f       	sbci	r31, 0xFB	; 251
+     2dc:	70 83       	st	Z, r23
+     2de:	86 2f       	mov	r24, r22
+     2e0:	8f 5f       	subi	r24, 0xFF	; 255
+     2e2:	80 93 37 04 	sts	0x0437, r24
+						UDR0 = usart0_rx_data;
+     2e6:	ec e2       	ldi	r30, 0x2C	; 44
+     2e8:	f0 e0       	ldi	r31, 0x00	; 0
+     2ea:	80 91 53 04 	lds	r24, 0x0453
+     2ee:	80 83       	st	Z, r24
+						if(password_idx >= 6)
+     2f0:	80 91 37 04 	lds	r24, 0x0437
+     2f4:	86 30       	cpi	r24, 0x06	; 6
+     2f6:	08 f4       	brcc	.+2      	; 0x2fa <main+0x22a>
+     2f8:	9e c0       	rjmp	.+316    	; 0x436 <main+0x366>
+							usart0_tx_enterpass = 1;
+     2fa:	81 e0       	ldi	r24, 0x01	; 1
+     2fc:	80 93 30 04 	sts	0x0430, r24
+     300:	9a c0       	rjmp	.+308    	; 0x436 <main+0x366>
+					}
+					else if(find_mode) // 찾기모드
+     302:	80 91 34 04 	lds	r24, 0x0434
+     306:	88 23       	and	r24, r24
+     308:	89 f1       	breq	.+98     	; 0x36c <main+0x29c>
+					{	
+						find_locker_password[selected_locker][password_idx++] = one_digit;
+     30a:	80 91 54 04 	lds	r24, 0x0454
+     30e:	28 2f       	mov	r18, r24
+     310:	30 e0       	ldi	r19, 0x00	; 0
+     312:	60 91 37 04 	lds	r22, 0x0437
+     316:	46 2f       	mov	r20, r22
+     318:	50 e0       	ldi	r21, 0x00	; 0
+     31a:	79 81       	ldd	r23, Y+1	; 0x01
+     31c:	c9 01       	movw	r24, r18
+     31e:	88 0f       	add	r24, r24
+     320:	99 1f       	adc	r25, r25
+     322:	82 0f       	add	r24, r18
+     324:	93 1f       	adc	r25, r19
+     326:	88 0f       	add	r24, r24
+     328:	99 1f       	adc	r25, r25
+     32a:	84 0f       	add	r24, r20
+     32c:	95 1f       	adc	r25, r21
+     32e:	fc 01       	movw	r30, r24
+     330:	eb 5a       	subi	r30, 0xAB	; 171
+     332:	fb 4f       	sbci	r31, 0xFB	; 251
+     334:	70 83       	st	Z, r23
+     336:	86 2f       	mov	r24, r22
+     338:	8f 5f       	subi	r24, 0xFF	; 255
+     33a:	80 93 37 04 	sts	0x0437, r24
+						if(password_idx <= 3 )	UDR0 = usart0_rx_data;
+     33e:	80 91 37 04 	lds	r24, 0x0437
+     342:	84 30       	cpi	r24, 0x04	; 4
+     344:	30 f4       	brcc	.+12     	; 0x352 <main+0x282>
+     346:	ec e2       	ldi	r30, 0x2C	; 44
+     348:	f0 e0       	ldi	r31, 0x00	; 0
+     34a:	80 91 53 04 	lds	r24, 0x0453
+     34e:	80 83       	st	Z, r24
+     350:	72 c0       	rjmp	.+228    	; 0x436 <main+0x366>
+						else
+						{
+							UDR0 = '*';
+     352:	ec e2       	ldi	r30, 0x2C	; 44
+     354:	f0 e0       	ldi	r31, 0x00	; 0
+     356:	8a e2       	ldi	r24, 0x2A	; 42
+     358:	80 83       	st	Z, r24
+							if(password_idx >= 6)
+     35a:	80 91 37 04 	lds	r24, 0x0437
+     35e:	86 30       	cpi	r24, 0x06	; 6
+     360:	08 f4       	brcc	.+2      	; 0x364 <main+0x294>
+     362:	69 c0       	rjmp	.+210    	; 0x436 <main+0x366>
+								usart0_tx_enterpass = 1;		
+     364:	81 e0       	ldi	r24, 0x01	; 1
+     366:	80 93 30 04 	sts	0x0430, r24
+     36a:	65 c0       	rjmp	.+202    	; 0x436 <main+0x366>
+						}
+					}
+					else if(manager_mode) // 관리자 모드
+     36c:	80 91 35 04 	lds	r24, 0x0435
+     370:	88 23       	and	r24, r24
+     372:	09 f4       	brne	.+2      	; 0x376 <main+0x2a6>
+     374:	60 c0       	rjmp	.+192    	; 0x436 <main+0x366>
+					{
+						find_manager_password[manager_password_idx++] = one_digit;
+     376:	30 91 38 04 	lds	r19, 0x0438
+     37a:	83 2f       	mov	r24, r19
+     37c:	90 e0       	ldi	r25, 0x00	; 0
+     37e:	29 81       	ldd	r18, Y+1	; 0x01
+     380:	fc 01       	movw	r30, r24
+     382:	e3 5b       	subi	r30, 0xB3	; 179
+     384:	fb 4f       	sbci	r31, 0xFB	; 251
+     386:	20 83       	st	Z, r18
+     388:	83 2f       	mov	r24, r19
+     38a:	8f 5f       	subi	r24, 0xFF	; 255
+     38c:	80 93 38 04 	sts	0x0438, r24
+						UDR0 = '*';
+     390:	ec e2       	ldi	r30, 0x2C	; 44
+     392:	f0 e0       	ldi	r31, 0x00	; 0
+     394:	8a e2       	ldi	r24, 0x2A	; 42
+     396:	80 83       	st	Z, r24
+						if(manager_password_idx >= 6)
+     398:	80 91 38 04 	lds	r24, 0x0438
+     39c:	86 30       	cpi	r24, 0x06	; 6
+     39e:	08 f4       	brcc	.+2      	; 0x3a2 <main+0x2d2>
+     3a0:	4a c0       	rjmp	.+148    	; 0x436 <main+0x366>
+							usart0_tx_enterpass = 1;
+     3a2:	81 e0       	ldi	r24, 0x01	; 1
+     3a4:	80 93 30 04 	sts	0x0430, r24
+     3a8:	46 c0       	rjmp	.+140    	; 0x436 <main+0x366>
+					}
+				}
+				else if(usart0_rx_data == '\b') // BACK SPACE 입력 
+     3aa:	80 91 53 04 	lds	r24, 0x0453
+     3ae:	88 30       	cpi	r24, 0x08	; 8
+     3b0:	91 f4       	brne	.+36     	; 0x3d6 <main+0x306>
+				{
+					UDR0 = '\r';
+     3b2:	ec e2       	ldi	r30, 0x2C	; 44
+     3b4:	f0 e0       	ldi	r31, 0x00	; 0
+     3b6:	8d e0       	ldi	r24, 0x0D	; 13
+     3b8:	80 83       	st	Z, r24
+					if(keep_mode || find_mode) password_idx = 0;
+     3ba:	80 91 33 04 	lds	r24, 0x0433
+     3be:	88 23       	and	r24, r24
+     3c0:	21 f4       	brne	.+8      	; 0x3ca <main+0x2fa>
+     3c2:	80 91 34 04 	lds	r24, 0x0434
+     3c6:	88 23       	and	r24, r24
+     3c8:	19 f0       	breq	.+6      	; 0x3d0 <main+0x300>
+     3ca:	10 92 37 04 	sts	0x0437, r1
+     3ce:	33 c0       	rjmp	.+102    	; 0x436 <main+0x366>
+					else manager_password_idx = 0;
+     3d0:	10 92 38 04 	sts	0x0438, r1
+     3d4:	30 c0       	rjmp	.+96     	; 0x436 <main+0x366>
+				}
+				else if(usart0_rx_data == ' ') // SPACE 입력 
+     3d6:	80 91 53 04 	lds	r24, 0x0453
+     3da:	80 32       	cpi	r24, 0x20	; 32
+     3dc:	61 f5       	brne	.+88     	; 0x436 <main+0x366>
+				{
+					if(password_idx) UDR0 = '\n'; // 입력한 패스워드가 있을 때
+     3de:	80 91 37 04 	lds	r24, 0x0437
+     3e2:	88 23       	and	r24, r24
+     3e4:	21 f0       	breq	.+8      	; 0x3ee <main+0x31e>
+     3e6:	ec e2       	ldi	r30, 0x2C	; 44
+     3e8:	f0 e0       	ldi	r31, 0x00	; 0
+     3ea:	8a e0       	ldi	r24, 0x0A	; 10
+     3ec:	80 83       	st	Z, r24
+
+					if(keep_mode || find_mode) password_idx = 0;
+     3ee:	80 91 33 04 	lds	r24, 0x0433
+     3f2:	88 23       	and	r24, r24
+     3f4:	21 f4       	brne	.+8      	; 0x3fe <main+0x32e>
+     3f6:	80 91 34 04 	lds	r24, 0x0434
+     3fa:	88 23       	and	r24, r24
+     3fc:	19 f0       	breq	.+6      	; 0x404 <main+0x334>
+     3fe:	10 92 37 04 	sts	0x0437, r1
+     402:	02 c0       	rjmp	.+4      	; 0x408 <main+0x338>
+					else manager_password_idx = 0;
+     404:	10 92 38 04 	sts	0x0438, r1
+
+					if(keep_mode) usart0_tx_keep = 1;
+     408:	80 91 33 04 	lds	r24, 0x0433
+     40c:	88 23       	and	r24, r24
+     40e:	21 f0       	breq	.+8      	; 0x418 <main+0x348>
+     410:	81 e0       	ldi	r24, 0x01	; 1
+     412:	80 93 2c 04 	sts	0x042C, r24
+     416:	0f c0       	rjmp	.+30     	; 0x436 <main+0x366>
+					else if(find_mode) usart0_tx_find = 1;
+     418:	80 91 34 04 	lds	r24, 0x0434
+     41c:	88 23       	and	r24, r24
+     41e:	21 f0       	breq	.+8      	; 0x428 <main+0x358>
+     420:	81 e0       	ldi	r24, 0x01	; 1
+     422:	80 93 2d 04 	sts	0x042D, r24
+     426:	07 c0       	rjmp	.+14     	; 0x436 <main+0x366>
+					else if(manager_mode) usart0_tx_menu = 1;
+     428:	80 91 35 04 	lds	r24, 0x0435
+     42c:	88 23       	and	r24, r24
+     42e:	19 f0       	breq	.+6      	; 0x436 <main+0x366>
+     430:	81 e0       	ldi	r24, 0x01	; 1
+     432:	80 93 2a 04 	sts	0x042A, r24
+				}
+			}
+			usart0_rx_eflg = 0;
+     436:	10 92 2b 04 	sts	0x042B, r1
+		}
+		if(usart0_tx_error) // 송신 이상 발생 시 menu로 이동
+     43a:	80 91 2f 04 	lds	r24, 0x042F
+     43e:	88 23       	and	r24, r24
+     440:	09 f4       	brne	.+2      	; 0x444 <main+0x374>
+     442:	55 ce       	rjmp	.-854    	; 0xee <main+0x1e>
+		{
+			usart0_tx_menu = 1;
+     444:	81 e0       	ldi	r24, 0x01	; 1
+     446:	80 93 2a 04 	sts	0x042A, r24
+			usart0_tx_error = 0;
+     44a:	10 92 2f 04 	sts	0x042F, r1
+     44e:	4f ce       	rjmp	.-866    	; 0xee <main+0x1e>
+
+00000450 <cpu_init>:
+	return 0;
+}
+
+// =========== CPU 초기화 =============
+void cpu_init(void)
+{
+     450:	df 93       	push	r29
+     452:	cf 93       	push	r28
+     454:	cd b7       	in	r28, 0x3d	; 61
+     456:	de b7       	in	r29, 0x3e	; 62
+	없을 경우 MCU가 이상 동작을 할 수 있다. 
+	(아래 코드는 그대로 사용하도록 함 ) 
+*/
+
+//	External (외부) interrut 0~7 발생하지 않도록 (disable) -> datasheet p. 90 ~ 92
+	EICRA = 0x00;
+     458:	ea e6       	ldi	r30, 0x6A	; 106
+     45a:	f0 e0       	ldi	r31, 0x00	; 0
+     45c:	10 82       	st	Z, r1
+	EICRB = 0x00;
+     45e:	ea e5       	ldi	r30, 0x5A	; 90
+     460:	f0 e0       	ldi	r31, 0x00	; 0
+     462:	10 82       	st	Z, r1
+	EIMSK = 0x00; 
+     464:	e9 e5       	ldi	r30, 0x59	; 89
+     466:	f0 e0       	ldi	r31, 0x00	; 0
+     468:	10 82       	st	Z, r1
+
+// EEPROM의 interrupy 발생하지 않도록 (disable) -> datasheet p. 22
+	EECR = 0x00;
+     46a:	ec e3       	ldi	r30, 0x3C	; 60
+     46c:	f0 e0       	ldi	r31, 0x00	; 0
+     46e:	10 82       	st	Z, r1
+
+// Timer(s) / Counter(s) Interrupt (s) 발생하지 않도록 (disable)
+	TIMSK = 0x00;
+     470:	e7 e5       	ldi	r30, 0x57	; 87
+     472:	f0 e0       	ldi	r31, 0x00	; 0
+     474:	10 82       	st	Z, r1
+	ETIMSK = 0x00;
+     476:	ed e7       	ldi	r30, 0x7D	; 125
+     478:	f0 e0       	ldi	r31, 0x00	; 0
+     47a:	10 82       	st	Z, r1
+
+// USART 0,1의 interrupt 발생하지 않도록 (disable) -> datasheet p. 190
+	UCSR0B = 0x00;
+     47c:	ea e2       	ldi	r30, 0x2A	; 42
+     47e:	f0 e0       	ldi	r31, 0x00	; 0
+     480:	10 82       	st	Z, r1
+	UCSR1B = 0x00;
+     482:	ea e9       	ldi	r30, 0x9A	; 154
+     484:	f0 e0       	ldi	r31, 0x00	; 0
+     486:	10 82       	st	Z, r1
+
+// SPI interrupt 발생하지 않도록 (disable) -> datasheet p. 167
+	SPCR = 0x00;
+     488:	ed e2       	ldi	r30, 0x2D	; 45
+     48a:	f0 e0       	ldi	r31, 0x00	; 0
+     48c:	10 82       	st	Z, r1
+
+// TWI의 interrupt 발생하지 않도록 (disable) -> datasheet p. 206
+	TWCR = 0x00;
+     48e:	e4 e7       	ldi	r30, 0x74	; 116
+     490:	f0 e0       	ldi	r31, 0x00	; 0
+     492:	10 82       	st	Z, r1
+
+// Analog-to-Digital converter의 interrupt 발생하지 않도록 (disable) -> datasheet p. 224
+	ACSR = 0x00;
+     494:	e8 e2       	ldi	r30, 0x28	; 40
+     496:	f0 e0       	ldi	r31, 0x00	; 0
+     498:	10 82       	st	Z, r1
+/* 
+	Global interrupts enable : sei 함수가 실행이 되어야 
+	각 block의 interrupt를 enable/disable할 수 있음 --> 무조건 사용함 
+	sei 함수는 interrupt.h에 선언되어 있음
+*/
+	sei();
+     49a:	78 94       	sei
+	범용 digital I/O pin 기본 설정 : 기본적으로
+	입력으로 설정하고, pull-up 저항을 사용하지 않도록 한다.
+*/
+
+// PortA 설정 
+	PORTA = 0x00;	// 포트 출력 reg  
+     49c:	eb e3       	ldi	r30, 0x3B	; 59
+     49e:	f0 e0       	ldi	r31, 0x00	; 0
+     4a0:	10 82       	st	Z, r1
+	DDRA = 0x00;	// 포트 방향 reg(0입력, 1출력)
+     4a2:	ea e3       	ldi	r30, 0x3A	; 58
+     4a4:	f0 e0       	ldi	r31, 0x00	; 0
+     4a6:	10 82       	st	Z, r1
+
+// PortB 설정 
+	PORTB = 0x00;	// 포트 출력 reg
+     4a8:	e8 e3       	ldi	r30, 0x38	; 56
+     4aa:	f0 e0       	ldi	r31, 0x00	; 0
+     4ac:	10 82       	st	Z, r1
+	DDRB = 0x00;	// 포트 방향 reg(0입력, 1출력)
+     4ae:	e7 e3       	ldi	r30, 0x37	; 55
+     4b0:	f0 e0       	ldi	r31, 0x00	; 0
+     4b2:	10 82       	st	Z, r1
+
+// PortC 설정 
+	PORTC = 0x00;	// 포트 출력 reg
+     4b4:	e5 e3       	ldi	r30, 0x35	; 53
+     4b6:	f0 e0       	ldi	r31, 0x00	; 0
+     4b8:	10 82       	st	Z, r1
+	DDRC = 0x00;	// 포트 방향 reg(0입력, 1출력)
+     4ba:	e4 e3       	ldi	r30, 0x34	; 52
+     4bc:	f0 e0       	ldi	r31, 0x00	; 0
+     4be:	10 82       	st	Z, r1
+
+// PortD 설정 
+	PORTD = 0x00;	// 포트 출력 reg
+     4c0:	e2 e3       	ldi	r30, 0x32	; 50
+     4c2:	f0 e0       	ldi	r31, 0x00	; 0
+     4c4:	10 82       	st	Z, r1
+	DDRD = 0x00;	// 포트 방향 reg(0입력, 1출력)
+     4c6:	e1 e3       	ldi	r30, 0x31	; 49
+     4c8:	f0 e0       	ldi	r31, 0x00	; 0
+     4ca:	10 82       	st	Z, r1
+
+// PortE 설정 
+	PORTE = 0x00;	// 포트 출력 reg
+     4cc:	e3 e2       	ldi	r30, 0x23	; 35
+     4ce:	f0 e0       	ldi	r31, 0x00	; 0
+     4d0:	10 82       	st	Z, r1
+	DDRE = 0x00;	// 포트 방향 reg(0입력, 1출력)
+     4d2:	e2 e2       	ldi	r30, 0x22	; 34
+     4d4:	f0 e0       	ldi	r31, 0x00	; 0
+     4d6:	10 82       	st	Z, r1
+
+// PortF 설정 
+	PORTF = 0x00;	// 포트 출력 reg
+     4d8:	e2 e6       	ldi	r30, 0x62	; 98
+     4da:	f0 e0       	ldi	r31, 0x00	; 0
+     4dc:	10 82       	st	Z, r1
+	DDRF = 0x00;	// 포트 방향 reg(0입력, 1출력)
+     4de:	e1 e6       	ldi	r30, 0x61	; 97
+     4e0:	f0 e0       	ldi	r31, 0x00	; 0
+     4e2:	10 82       	st	Z, r1
+// PortF 설정 
+	//PORTG = 0x00;	// 포트 출력 reg
+	//DDRG = 0x00;	// 포트 방향 reg(0입력, 1출력)
+
+	PORTG = 0xFF;	// 포트 출력 reg
+     4e4:	e5 e6       	ldi	r30, 0x65	; 101
+     4e6:	f0 e0       	ldi	r31, 0x00	; 0
+     4e8:	8f ef       	ldi	r24, 0xFF	; 255
+     4ea:	80 83       	st	Z, r24
+	DDRG = 0XFF; 	// 포트 방향 reg(0입력, 1출력) 
+     4ec:	e4 e6       	ldi	r30, 0x64	; 100
+     4ee:	f0 e0       	ldi	r31, 0x00	; 0
+     4f0:	8f ef       	ldi	r24, 0xFF	; 255
+     4f2:	80 83       	st	Z, r24
+
+}
+     4f4:	cf 91       	pop	r28
+     4f6:	df 91       	pop	r29
+     4f8:	08 95       	ret
+
+000004fa <usart01_setup>:
+
+void usart01_setup(void)
+{
+     4fa:	df 93       	push	r29
+     4fc:	cf 93       	push	r28
+     4fe:	cd b7       	in	r28, 0x3d	; 61
+     500:	de b7       	in	r29, 0x3e	; 62
+
+//	USART port 통신 초기화
+//	USART0 : 19200Bps, 8Data, 1 Stop, No Parity
+
+	UCSR0A = 0x00;
+     502:	eb e2       	ldi	r30, 0x2B	; 43
+     504:	f0 e0       	ldi	r31, 0x00	; 0
+     506:	10 82       	st	Z, r1
+	UCSR0C = 0x06;
+     508:	e5 e9       	ldi	r30, 0x95	; 149
+     50a:	f0 e0       	ldi	r31, 0x00	; 0
+     50c:	86 e0       	ldi	r24, 0x06	; 6
+     50e:	80 83       	st	Z, r24
+	UBRR0H = 0x00;
+     510:	e0 e9       	ldi	r30, 0x90	; 144
+     512:	f0 e0       	ldi	r31, 0x00	; 0
+     514:	10 82       	st	Z, r1
+	UBRR0L = 0x33;
+     516:	e9 e2       	ldi	r30, 0x29	; 41
+     518:	f0 e0       	ldi	r31, 0x00	; 0
+     51a:	83 e3       	ldi	r24, 0x33	; 51
+     51c:	80 83       	st	Z, r24
+
+	UCSR1A = 0x00;
+     51e:	eb e9       	ldi	r30, 0x9B	; 155
+     520:	f0 e0       	ldi	r31, 0x00	; 0
+     522:	10 82       	st	Z, r1
+	UCSR1B = 0x18;
+     524:	ea e9       	ldi	r30, 0x9A	; 154
+     526:	f0 e0       	ldi	r31, 0x00	; 0
+     528:	88 e1       	ldi	r24, 0x18	; 24
+     52a:	80 83       	st	Z, r24
+	UCSR1C = 0x06;
+     52c:	ed e9       	ldi	r30, 0x9D	; 157
+     52e:	f0 e0       	ldi	r31, 0x00	; 0
+     530:	86 e0       	ldi	r24, 0x06	; 6
+     532:	80 83       	st	Z, r24
+	UBRR1H = 0x00;
+     534:	e8 e9       	ldi	r30, 0x98	; 152
+     536:	f0 e0       	ldi	r31, 0x00	; 0
+     538:	10 82       	st	Z, r1
+	UBRR1L = 0x33; 	
+     53a:	e9 e9       	ldi	r30, 0x99	; 153
+     53c:	f0 e0       	ldi	r31, 0x00	; 0
+     53e:	83 e3       	ldi	r24, 0x33	; 51
+     540:	80 83       	st	Z, r24
+
+	UCSR0B = 0xF8; 
+     542:	ea e2       	ldi	r30, 0x2A	; 42
+     544:	f0 e0       	ldi	r31, 0x00	; 0
+     546:	88 ef       	ldi	r24, 0xF8	; 248
+     548:	80 83       	st	Z, r24
+}
+     54a:	cf 91       	pop	r28
+     54c:	df 91       	pop	r29
+     54e:	08 95       	ret
+
+00000550 <__vector_19>:
+
+
+SIGNAL(SIG_UART0_DATA) // UDR Empty Interrupt : 연속된 송신시 사용 
+{
+     550:	1f 92       	push	r1
+     552:	0f 92       	push	r0
+     554:	0f b6       	in	r0, 0x3f	; 63
+     556:	0f 92       	push	r0
+     558:	00 90 5b 00 	lds	r0, 0x005B
+     55c:	0f 92       	push	r0
+     55e:	11 24       	eor	r1, r1
+     560:	2f 93       	push	r18
+     562:	3f 93       	push	r19
+     564:	4f 93       	push	r20
+     566:	5f 93       	push	r21
+     568:	6f 93       	push	r22
+     56a:	7f 93       	push	r23
+     56c:	8f 93       	push	r24
+     56e:	9f 93       	push	r25
+     570:	af 93       	push	r26
+     572:	bf 93       	push	r27
+     574:	ef 93       	push	r30
+     576:	ff 93       	push	r31
+     578:	df 93       	push	r29
+     57a:	cf 93       	push	r28
+     57c:	cd b7       	in	r28, 0x3d	; 61
+     57e:	de b7       	in	r29, 0x3e	; 62
+	if(menu_mode) 
+     580:	80 91 31 04 	lds	r24, 0x0431
+     584:	88 23       	and	r24, r24
+     586:	29 f1       	breq	.+74     	; 0x5d2 <__vector_19+0x82>
+	{ // 메뉴 문자열 출력
+		if(menu[i] == '\0') // 메뉴 문자열 끝에 도달
+     588:	80 91 47 04 	lds	r24, 0x0447
+     58c:	90 91 48 04 	lds	r25, 0x0448
+     590:	fc 01       	movw	r30, r24
+     592:	ea 5f       	subi	r30, 0xFA	; 250
+     594:	fe 4f       	sbci	r31, 0xFE	; 254
+     596:	80 81       	ld	r24, Z
+     598:	88 23       	and	r24, r24
+     59a:	49 f4       	brne	.+18     	; 0x5ae <__vector_19+0x5e>
+		{
+			UCSR0B = 0xD8; // UDRE interrupt disable
+     59c:	ea e2       	ldi	r30, 0x2A	; 42
+     59e:	f0 e0       	ldi	r31, 0x00	; 0
+     5a0:	88 ed       	ldi	r24, 0xD8	; 216
+     5a2:	80 83       	st	Z, r24
+			i = 0; 
+     5a4:	10 92 48 04 	sts	0x0448, r1
+     5a8:	10 92 47 04 	sts	0x0447, r1
+     5ac:	82 c5       	rjmp	.+2820   	; 0x10b2 <__vector_19+0xb62>
+		}
+		else
+			UDR0 = menu[i++];
+     5ae:	ac e2       	ldi	r26, 0x2C	; 44
+     5b0:	b0 e0       	ldi	r27, 0x00	; 0
+     5b2:	20 91 47 04 	lds	r18, 0x0447
+     5b6:	30 91 48 04 	lds	r19, 0x0448
+     5ba:	f9 01       	movw	r30, r18
+     5bc:	ea 5f       	subi	r30, 0xFA	; 250
+     5be:	fe 4f       	sbci	r31, 0xFE	; 254
+     5c0:	80 81       	ld	r24, Z
+     5c2:	8c 93       	st	X, r24
+     5c4:	c9 01       	movw	r24, r18
+     5c6:	01 96       	adiw	r24, 0x01	; 1
+     5c8:	90 93 48 04 	sts	0x0448, r25
+     5cc:	80 93 47 04 	sts	0x0447, r24
+     5d0:	70 c5       	rjmp	.+2784   	; 0x10b2 <__vector_19+0xb62>
+	}
+	else if(!enterpass_mode)  // 비밀번호 입력과 관련 없음
+     5d2:	80 91 36 04 	lds	r24, 0x0436
+     5d6:	88 23       	and	r24, r24
+     5d8:	09 f0       	breq	.+2      	; 0x5dc <__vector_19+0x8c>
+     5da:	1b c2       	rjmp	.+1078   	; 0xa12 <__vector_19+0x4c2>
+	{ 
+	    if(keep_mode) 
+     5dc:	80 91 33 04 	lds	r24, 0x0433
+     5e0:	88 23       	and	r24, r24
+     5e2:	09 f4       	brne	.+2      	; 0x5e6 <__vector_19+0x96>
+     5e4:	69 c0       	rjmp	.+210    	; 0x6b8 <__vector_19+0x168>
+	    {// 보관 문자열 출력 
+	        if(keep[i] == '\0') // 보관 문자열 끝에 도달하면 사물함 사용현황 출력
+     5e6:	80 91 47 04 	lds	r24, 0x0447
+     5ea:	90 91 48 04 	lds	r25, 0x0448
+     5ee:	fc 01       	movw	r30, r24
+     5f0:	e4 56       	subi	r30, 0x64	; 100
+     5f2:	fe 4f       	sbci	r31, 0xFE	; 254
+     5f4:	80 81       	ld	r24, Z
+     5f6:	88 23       	and	r24, r24
+     5f8:	09 f0       	breq	.+2      	; 0x5fc <__vector_19+0xac>
+     5fa:	4c c0       	rjmp	.+152    	; 0x694 <__vector_19+0x144>
+	        {
+	            if(locker_idx >= 1 && locker_idx <= 9)
+     5fc:	80 91 29 04 	lds	r24, 0x0429
+     600:	88 23       	and	r24, r24
+     602:	39 f1       	breq	.+78     	; 0x652 <__vector_19+0x102>
+     604:	80 91 29 04 	lds	r24, 0x0429
+     608:	8a 30       	cpi	r24, 0x0A	; 10
+     60a:	18 f5       	brcc	.+70     	; 0x652 <__vector_19+0x102>
+	            {
+		           	if(locker_usage[locker_idx] == 1) UDR0 = 'X'; // 사물함이 사용중이면  
+     60c:	80 91 29 04 	lds	r24, 0x0429
+     610:	88 2f       	mov	r24, r24
+     612:	90 e0       	ldi	r25, 0x00	; 0
+     614:	fc 01       	movw	r30, r24
+     616:	e1 5e       	subi	r30, 0xE1	; 225
+     618:	fb 4f       	sbci	r31, 0xFB	; 251
+     61a:	80 81       	ld	r24, Z
+     61c:	81 30       	cpi	r24, 0x01	; 1
+     61e:	29 f4       	brne	.+10     	; 0x62a <__vector_19+0xda>
+     620:	ec e2       	ldi	r30, 0x2C	; 44
+     622:	f0 e0       	ldi	r31, 0x00	; 0
+     624:	88 e5       	ldi	r24, 0x58	; 88
+     626:	80 83       	st	Z, r24
+     628:	2f c0       	rjmp	.+94     	; 0x688 <__vector_19+0x138>
+		         	else if(locker_usage[locker_idx] == 0) UDR0 = 'O';// 사물함이 비어 있으면
+     62a:	80 91 29 04 	lds	r24, 0x0429
+     62e:	88 2f       	mov	r24, r24
+     630:	90 e0       	ldi	r25, 0x00	; 0
+     632:	fc 01       	movw	r30, r24
+     634:	e1 5e       	subi	r30, 0xE1	; 225
+     636:	fb 4f       	sbci	r31, 0xFB	; 251
+     638:	80 81       	ld	r24, Z
+     63a:	88 23       	and	r24, r24
+     63c:	29 f4       	brne	.+10     	; 0x648 <__vector_19+0xf8>
+     63e:	ec e2       	ldi	r30, 0x2C	; 44
+     640:	f0 e0       	ldi	r31, 0x00	; 0
+     642:	8f e4       	ldi	r24, 0x4F	; 79
+     644:	80 83       	st	Z, r24
+     646:	20 c0       	rjmp	.+64     	; 0x688 <__vector_19+0x138>
+					else  UDR0 = 'L';// 사물함이 잠겨 있으면
+     648:	ec e2       	ldi	r30, 0x2C	; 44
+     64a:	f0 e0       	ldi	r31, 0x00	; 0
+     64c:	8c e4       	ldi	r24, 0x4C	; 76
+     64e:	80 83       	st	Z, r24
+     650:	1b c0       	rjmp	.+54     	; 0x688 <__vector_19+0x138>
+	            }
+	            else if(locker_idx == 10)
+     652:	80 91 29 04 	lds	r24, 0x0429
+     656:	8a 30       	cpi	r24, 0x0A	; 10
+     658:	29 f4       	brne	.+10     	; 0x664 <__vector_19+0x114>
+	                UDR0 = '\r';
+     65a:	ec e2       	ldi	r30, 0x2C	; 44
+     65c:	f0 e0       	ldi	r31, 0x00	; 0
+     65e:	8d e0       	ldi	r24, 0x0D	; 13
+     660:	80 83       	st	Z, r24
+     662:	12 c0       	rjmp	.+36     	; 0x688 <__vector_19+0x138>
+	            else if(locker_idx == 11)
+     664:	80 91 29 04 	lds	r24, 0x0429
+     668:	8b 30       	cpi	r24, 0x0B	; 11
+     66a:	71 f4       	brne	.+28     	; 0x688 <__vector_19+0x138>
+	            {
+
+	                UDR0 = '\n';
+     66c:	ec e2       	ldi	r30, 0x2C	; 44
+     66e:	f0 e0       	ldi	r31, 0x00	; 0
+     670:	8a e0       	ldi	r24, 0x0A	; 10
+     672:	80 83       	st	Z, r24
+					UCSR0B = 0xD8;
+     674:	ea e2       	ldi	r30, 0x2A	; 42
+     676:	f0 e0       	ldi	r31, 0x00	; 0
+     678:	88 ed       	ldi	r24, 0xD8	; 216
+     67a:	80 83       	st	Z, r24
+	                i = 0; locker_idx = 0;
+     67c:	10 92 48 04 	sts	0x0448, r1
+     680:	10 92 47 04 	sts	0x0447, r1
+     684:	10 92 29 04 	sts	0x0429, r1
+	            }
+	            locker_idx++;
+     688:	80 91 29 04 	lds	r24, 0x0429
+     68c:	8f 5f       	subi	r24, 0xFF	; 255
+     68e:	80 93 29 04 	sts	0x0429, r24
+     692:	0f c5       	rjmp	.+2590   	; 0x10b2 <__vector_19+0xb62>
+	        }
+	        else
+	            UDR0 = keep[i++];
+     694:	ac e2       	ldi	r26, 0x2C	; 44
+     696:	b0 e0       	ldi	r27, 0x00	; 0
+     698:	20 91 47 04 	lds	r18, 0x0447
+     69c:	30 91 48 04 	lds	r19, 0x0448
+     6a0:	f9 01       	movw	r30, r18
+     6a2:	e4 56       	subi	r30, 0x64	; 100
+     6a4:	fe 4f       	sbci	r31, 0xFE	; 254
+     6a6:	80 81       	ld	r24, Z
+     6a8:	8c 93       	st	X, r24
+     6aa:	c9 01       	movw	r24, r18
+     6ac:	01 96       	adiw	r24, 0x01	; 1
+     6ae:	90 93 48 04 	sts	0x0448, r25
+     6b2:	80 93 47 04 	sts	0x0447, r24
+     6b6:	fd c4       	rjmp	.+2554   	; 0x10b2 <__vector_19+0xb62>
+	    }
+	    else if(find_mode) 
+     6b8:	80 91 34 04 	lds	r24, 0x0434
+     6bc:	88 23       	and	r24, r24
+     6be:	09 f4       	brne	.+2      	; 0x6c2 <__vector_19+0x172>
+     6c0:	69 c0       	rjmp	.+210    	; 0x794 <__vector_19+0x244>
+	    {//  찾기 문자열 출력
+	        if(find[i] == '\0') // 찾기 문자열 끝에 도달하면 사물함 사용현황 출력
+     6c2:	80 91 47 04 	lds	r24, 0x0447
+     6c6:	90 91 48 04 	lds	r25, 0x0448
+     6ca:	fc 01       	movw	r30, r24
+     6cc:	e7 50       	subi	r30, 0x07	; 7
+     6ce:	fe 4f       	sbci	r31, 0xFE	; 254
+     6d0:	80 81       	ld	r24, Z
+     6d2:	88 23       	and	r24, r24
+     6d4:	09 f0       	breq	.+2      	; 0x6d8 <__vector_19+0x188>
+     6d6:	4c c0       	rjmp	.+152    	; 0x770 <__vector_19+0x220>
+	        {
+	            if(locker_idx >= 1 && locker_idx <= 9)
+     6d8:	80 91 29 04 	lds	r24, 0x0429
+     6dc:	88 23       	and	r24, r24
+     6de:	39 f1       	breq	.+78     	; 0x72e <__vector_19+0x1de>
+     6e0:	80 91 29 04 	lds	r24, 0x0429
+     6e4:	8a 30       	cpi	r24, 0x0A	; 10
+     6e6:	18 f5       	brcc	.+70     	; 0x72e <__vector_19+0x1de>
+	            {
+		           	if(locker_usage[locker_idx] == 1) UDR0 = 'X'; // 사물함이 사용중이면  
+     6e8:	80 91 29 04 	lds	r24, 0x0429
+     6ec:	88 2f       	mov	r24, r24
+     6ee:	90 e0       	ldi	r25, 0x00	; 0
+     6f0:	fc 01       	movw	r30, r24
+     6f2:	e1 5e       	subi	r30, 0xE1	; 225
+     6f4:	fb 4f       	sbci	r31, 0xFB	; 251
+     6f6:	80 81       	ld	r24, Z
+     6f8:	81 30       	cpi	r24, 0x01	; 1
+     6fa:	29 f4       	brne	.+10     	; 0x706 <__vector_19+0x1b6>
+     6fc:	ec e2       	ldi	r30, 0x2C	; 44
+     6fe:	f0 e0       	ldi	r31, 0x00	; 0
+     700:	88 e5       	ldi	r24, 0x58	; 88
+     702:	80 83       	st	Z, r24
+     704:	2f c0       	rjmp	.+94     	; 0x764 <__vector_19+0x214>
+		         	else if(locker_usage[locker_idx] == 0) UDR0 = 'O';// 사물함이 비어 있으면
+     706:	80 91 29 04 	lds	r24, 0x0429
+     70a:	88 2f       	mov	r24, r24
+     70c:	90 e0       	ldi	r25, 0x00	; 0
+     70e:	fc 01       	movw	r30, r24
+     710:	e1 5e       	subi	r30, 0xE1	; 225
+     712:	fb 4f       	sbci	r31, 0xFB	; 251
+     714:	80 81       	ld	r24, Z
+     716:	88 23       	and	r24, r24
+     718:	29 f4       	brne	.+10     	; 0x724 <__vector_19+0x1d4>
+     71a:	ec e2       	ldi	r30, 0x2C	; 44
+     71c:	f0 e0       	ldi	r31, 0x00	; 0
+     71e:	8f e4       	ldi	r24, 0x4F	; 79
+     720:	80 83       	st	Z, r24
+     722:	20 c0       	rjmp	.+64     	; 0x764 <__vector_19+0x214>
+					else  UDR0 = 'L';// 사물함이 잠겨 있으면
+     724:	ec e2       	ldi	r30, 0x2C	; 44
+     726:	f0 e0       	ldi	r31, 0x00	; 0
+     728:	8c e4       	ldi	r24, 0x4C	; 76
+     72a:	80 83       	st	Z, r24
+     72c:	1b c0       	rjmp	.+54     	; 0x764 <__vector_19+0x214>
+	            }
+	            else if(locker_idx == 10)
+     72e:	80 91 29 04 	lds	r24, 0x0429
+     732:	8a 30       	cpi	r24, 0x0A	; 10
+     734:	29 f4       	brne	.+10     	; 0x740 <__vector_19+0x1f0>
+	                UDR0 = '\r';
+     736:	ec e2       	ldi	r30, 0x2C	; 44
+     738:	f0 e0       	ldi	r31, 0x00	; 0
+     73a:	8d e0       	ldi	r24, 0x0D	; 13
+     73c:	80 83       	st	Z, r24
+     73e:	12 c0       	rjmp	.+36     	; 0x764 <__vector_19+0x214>
+	            else if(locker_idx == 11)
+     740:	80 91 29 04 	lds	r24, 0x0429
+     744:	8b 30       	cpi	r24, 0x0B	; 11
+     746:	71 f4       	brne	.+28     	; 0x764 <__vector_19+0x214>
+	            {
+	                UDR0 = '\n';
+     748:	ec e2       	ldi	r30, 0x2C	; 44
+     74a:	f0 e0       	ldi	r31, 0x00	; 0
+     74c:	8a e0       	ldi	r24, 0x0A	; 10
+     74e:	80 83       	st	Z, r24
+	                UCSR0B = 0xD8;
+     750:	ea e2       	ldi	r30, 0x2A	; 42
+     752:	f0 e0       	ldi	r31, 0x00	; 0
+     754:	88 ed       	ldi	r24, 0xD8	; 216
+     756:	80 83       	st	Z, r24
+	                i = 0; locker_idx = 0;
+     758:	10 92 48 04 	sts	0x0448, r1
+     75c:	10 92 47 04 	sts	0x0447, r1
+     760:	10 92 29 04 	sts	0x0429, r1
+	            }
+	            locker_idx++;
+     764:	80 91 29 04 	lds	r24, 0x0429
+     768:	8f 5f       	subi	r24, 0xFF	; 255
+     76a:	80 93 29 04 	sts	0x0429, r24
+     76e:	a1 c4       	rjmp	.+2370   	; 0x10b2 <__vector_19+0xb62>
+	        }
+	        else
+	            UDR0 = find[i++];
+     770:	ac e2       	ldi	r26, 0x2C	; 44
+     772:	b0 e0       	ldi	r27, 0x00	; 0
+     774:	20 91 47 04 	lds	r18, 0x0447
+     778:	30 91 48 04 	lds	r19, 0x0448
+     77c:	f9 01       	movw	r30, r18
+     77e:	e7 50       	subi	r30, 0x07	; 7
+     780:	fe 4f       	sbci	r31, 0xFE	; 254
+     782:	80 81       	ld	r24, Z
+     784:	8c 93       	st	X, r24
+     786:	c9 01       	movw	r24, r18
+     788:	01 96       	adiw	r24, 0x01	; 1
+     78a:	90 93 48 04 	sts	0x0448, r25
+     78e:	80 93 47 04 	sts	0x0447, r24
+     792:	8f c4       	rjmp	.+2334   	; 0x10b2 <__vector_19+0xb62>
+	    }
+	    else if(manager_mode) 
+     794:	80 91 35 04 	lds	r24, 0x0435
+     798:	88 23       	and	r24, r24
+     79a:	09 f4       	brne	.+2      	; 0x79e <__vector_19+0x24e>
+     79c:	8a c4       	rjmp	.+2324   	; 0x10b2 <__vector_19+0xb62>
+	    {// 관리자모드 관련 문자열 출력
+			if(manager_password_idx >= 6 && locker_usage[selected_locker] == 2) // 잠긴 자물함을 해제 할 때 문자열 출력
+     79e:	80 91 38 04 	lds	r24, 0x0438
+     7a2:	86 30       	cpi	r24, 0x06	; 6
+     7a4:	08 f4       	brcc	.+2      	; 0x7a8 <__vector_19+0x258>
+     7a6:	0b c1       	rjmp	.+534    	; 0x9be <__vector_19+0x46e>
+     7a8:	80 91 54 04 	lds	r24, 0x0454
+     7ac:	88 2f       	mov	r24, r24
+     7ae:	90 e0       	ldi	r25, 0x00	; 0
+     7b0:	fc 01       	movw	r30, r24
+     7b2:	e1 5e       	subi	r30, 0xE1	; 225
+     7b4:	fb 4f       	sbci	r31, 0xFB	; 251
+     7b6:	80 81       	ld	r24, Z
+     7b8:	82 30       	cpi	r24, 0x02	; 2
+     7ba:	09 f0       	breq	.+2      	; 0x7be <__vector_19+0x26e>
+     7bc:	00 c1       	rjmp	.+512    	; 0x9be <__vector_19+0x46e>
+			{
+				if(unlock[i] == '\0')
+     7be:	80 91 47 04 	lds	r24, 0x0447
+     7c2:	90 91 48 04 	lds	r25, 0x0448
+     7c6:	fc 01       	movw	r30, r24
+     7c8:	e4 5f       	subi	r30, 0xF4	; 244
+     7ca:	fc 4f       	sbci	r31, 0xFC	; 252
+     7cc:	80 81       	ld	r24, Z
+     7ce:	88 23       	and	r24, r24
+     7d0:	09 f0       	breq	.+2      	; 0x7d4 <__vector_19+0x284>
+     7d2:	d3 c0       	rjmp	.+422    	; 0x97a <__vector_19+0x42a>
+			    {
+					if(j == 0)
+     7d4:	80 91 49 04 	lds	r24, 0x0449
+     7d8:	90 91 4a 04 	lds	r25, 0x044A
+     7dc:	00 97       	sbiw	r24, 0x00	; 0
+     7de:	31 f5       	brne	.+76     	; 0x82c <__vector_19+0x2dc>
+					{
+						using_seconds = current_seconds - keeping_seconds[selected_locker];
+     7e0:	20 91 39 04 	lds	r18, 0x0439
+     7e4:	30 91 3a 04 	lds	r19, 0x043A
+     7e8:	80 91 54 04 	lds	r24, 0x0454
+     7ec:	88 2f       	mov	r24, r24
+     7ee:	90 e0       	ldi	r25, 0x00	; 0
+     7f0:	88 0f       	add	r24, r24
+     7f2:	99 1f       	adc	r25, r25
+     7f4:	fc 01       	movw	r30, r24
+     7f6:	e9 52       	subi	r30, 0x29	; 41
+     7f8:	fb 4f       	sbci	r31, 0xFB	; 251
+     7fa:	80 81       	ld	r24, Z
+     7fc:	91 81       	ldd	r25, Z+1	; 0x01
+     7fe:	a9 01       	movw	r20, r18
+     800:	48 1b       	sub	r20, r24
+     802:	59 0b       	sbc	r21, r25
+     804:	ca 01       	movw	r24, r20
+     806:	90 93 3c 04 	sts	0x043C, r25
+     80a:	80 93 3b 04 	sts	0x043B, r24
+						divide_seconds(using_seconds);
+     80e:	80 91 3b 04 	lds	r24, 0x043B
+     812:	90 91 3c 04 	lds	r25, 0x043C
+     816:	0e 94 e0 09 	call	0x13c0	; 0x13c0 <divide_seconds>
+						UDR0 = tens_minutes + 48;
+     81a:	ec e2       	ldi	r30, 0x2C	; 44
+     81c:	f0 e0       	ldi	r31, 0x00	; 0
+     81e:	80 91 3d 04 	lds	r24, 0x043D
+     822:	90 91 3e 04 	lds	r25, 0x043E
+     826:	80 5d       	subi	r24, 0xD0	; 208
+     828:	80 83       	st	Z, r24
+     82a:	9d c0       	rjmp	.+314    	; 0x966 <__vector_19+0x416>
+					}
+					else if(j == 1)
+     82c:	80 91 49 04 	lds	r24, 0x0449
+     830:	90 91 4a 04 	lds	r25, 0x044A
+     834:	81 30       	cpi	r24, 0x01	; 1
+     836:	91 05       	cpc	r25, r1
+     838:	49 f4       	brne	.+18     	; 0x84c <__vector_19+0x2fc>
+						UDR0 = ones_minutes + 48;
+     83a:	ec e2       	ldi	r30, 0x2C	; 44
+     83c:	f0 e0       	ldi	r31, 0x00	; 0
+     83e:	80 91 3f 04 	lds	r24, 0x043F
+     842:	90 91 40 04 	lds	r25, 0x0440
+     846:	80 5d       	subi	r24, 0xD0	; 208
+     848:	80 83       	st	Z, r24
+     84a:	8d c0       	rjmp	.+282    	; 0x966 <__vector_19+0x416>
+					else if(j == 2)
+     84c:	80 91 49 04 	lds	r24, 0x0449
+     850:	90 91 4a 04 	lds	r25, 0x044A
+     854:	82 30       	cpi	r24, 0x02	; 2
+     856:	91 05       	cpc	r25, r1
+     858:	29 f4       	brne	.+10     	; 0x864 <__vector_19+0x314>
+						UDR0 = ':';
+     85a:	ec e2       	ldi	r30, 0x2C	; 44
+     85c:	f0 e0       	ldi	r31, 0x00	; 0
+     85e:	8a e3       	ldi	r24, 0x3A	; 58
+     860:	80 83       	st	Z, r24
+     862:	81 c0       	rjmp	.+258    	; 0x966 <__vector_19+0x416>
+					else if(j == 3)
+     864:	80 91 49 04 	lds	r24, 0x0449
+     868:	90 91 4a 04 	lds	r25, 0x044A
+     86c:	83 30       	cpi	r24, 0x03	; 3
+     86e:	91 05       	cpc	r25, r1
+     870:	49 f4       	brne	.+18     	; 0x884 <__vector_19+0x334>
+						UDR0 = tens_seconds + 48;
+     872:	ec e2       	ldi	r30, 0x2C	; 44
+     874:	f0 e0       	ldi	r31, 0x00	; 0
+     876:	80 91 41 04 	lds	r24, 0x0441
+     87a:	90 91 42 04 	lds	r25, 0x0442
+     87e:	80 5d       	subi	r24, 0xD0	; 208
+     880:	80 83       	st	Z, r24
+     882:	71 c0       	rjmp	.+226    	; 0x966 <__vector_19+0x416>
+					else if(j == 4)
+     884:	80 91 49 04 	lds	r24, 0x0449
+     888:	90 91 4a 04 	lds	r25, 0x044A
+     88c:	84 30       	cpi	r24, 0x04	; 4
+     88e:	91 05       	cpc	r25, r1
+     890:	49 f4       	brne	.+18     	; 0x8a4 <__vector_19+0x354>
+						UDR0 = ones_seconds + 48;
+     892:	ec e2       	ldi	r30, 0x2C	; 44
+     894:	f0 e0       	ldi	r31, 0x00	; 0
+     896:	80 91 43 04 	lds	r24, 0x0443
+     89a:	90 91 44 04 	lds	r25, 0x0444
+     89e:	80 5d       	subi	r24, 0xD0	; 208
+     8a0:	80 83       	st	Z, r24
+     8a2:	61 c0       	rjmp	.+194    	; 0x966 <__vector_19+0x416>
+					else if(j == 5)	
+     8a4:	80 91 49 04 	lds	r24, 0x0449
+     8a8:	90 91 4a 04 	lds	r25, 0x044A
+     8ac:	85 30       	cpi	r24, 0x05	; 5
+     8ae:	91 05       	cpc	r25, r1
+     8b0:	29 f4       	brne	.+10     	; 0x8bc <__vector_19+0x36c>
+						UDR0 = ' ';
+     8b2:	ec e2       	ldi	r30, 0x2C	; 44
+     8b4:	f0 e0       	ldi	r31, 0x00	; 0
+     8b6:	80 e2       	ldi	r24, 0x20	; 32
+     8b8:	80 83       	st	Z, r24
+     8ba:	55 c0       	rjmp	.+170    	; 0x966 <__vector_19+0x416>
+					else if(j == 6)
+     8bc:	80 91 49 04 	lds	r24, 0x0449
+     8c0:	90 91 4a 04 	lds	r25, 0x044A
+     8c4:	86 30       	cpi	r24, 0x06	; 6
+     8c6:	91 05       	cpc	r25, r1
+     8c8:	79 f4       	brne	.+30     	; 0x8e8 <__vector_19+0x398>
+						UDR0 = (using_seconds / SECONDS_PER_DOLLAR+ 1) + 48; // 30초당 1달러
+     8ca:	ec e2       	ldi	r30, 0x2C	; 44
+     8cc:	f0 e0       	ldi	r31, 0x00	; 0
+     8ce:	80 91 3b 04 	lds	r24, 0x043B
+     8d2:	90 91 3c 04 	lds	r25, 0x043C
+     8d6:	2c e3       	ldi	r18, 0x3C	; 60
+     8d8:	30 e0       	ldi	r19, 0x00	; 0
+     8da:	b9 01       	movw	r22, r18
+     8dc:	0e 94 5e 0a 	call	0x14bc	; 0x14bc <__divmodhi4>
+     8e0:	cb 01       	movw	r24, r22
+     8e2:	8f 5c       	subi	r24, 0xCF	; 207
+     8e4:	80 83       	st	Z, r24
+     8e6:	3f c0       	rjmp	.+126    	; 0x966 <__vector_19+0x416>
+					else if(j == 7)
+     8e8:	80 91 49 04 	lds	r24, 0x0449
+     8ec:	90 91 4a 04 	lds	r25, 0x044A
+     8f0:	87 30       	cpi	r24, 0x07	; 7
+     8f2:	91 05       	cpc	r25, r1
+     8f4:	29 f4       	brne	.+10     	; 0x900 <__vector_19+0x3b0>
+						UDR0 = '$';
+     8f6:	ec e2       	ldi	r30, 0x2C	; 44
+     8f8:	f0 e0       	ldi	r31, 0x00	; 0
+     8fa:	84 e2       	ldi	r24, 0x24	; 36
+     8fc:	80 83       	st	Z, r24
+     8fe:	33 c0       	rjmp	.+102    	; 0x966 <__vector_19+0x416>
+					else if(j == 8)
+     900:	80 91 49 04 	lds	r24, 0x0449
+     904:	90 91 4a 04 	lds	r25, 0x044A
+     908:	88 30       	cpi	r24, 0x08	; 8
+     90a:	91 05       	cpc	r25, r1
+     90c:	29 f4       	brne	.+10     	; 0x918 <__vector_19+0x3c8>
+						UDR0 = '\r';
+     90e:	ec e2       	ldi	r30, 0x2C	; 44
+     910:	f0 e0       	ldi	r31, 0x00	; 0
+     912:	8d e0       	ldi	r24, 0x0D	; 13
+     914:	80 83       	st	Z, r24
+     916:	27 c0       	rjmp	.+78     	; 0x966 <__vector_19+0x416>
+					else
+					{	
+					 	UDR0 = '\n';
+     918:	ec e2       	ldi	r30, 0x2C	; 44
+     91a:	f0 e0       	ldi	r31, 0x00	; 0
+     91c:	8a e0       	ldi	r24, 0x0A	; 10
+     91e:	80 83       	st	Z, r24
+						UCSR0B = 0xD8;
+     920:	ea e2       	ldi	r30, 0x2A	; 42
+     922:	f0 e0       	ldi	r31, 0x00	; 0
+     924:	88 ed       	ldi	r24, 0xD8	; 216
+     926:	80 83       	st	Z, r24
+			       	 	locker_usage[selected_locker] = 0; password_error_cnt[selected_locker] = 0;
+     928:	80 91 54 04 	lds	r24, 0x0454
+     92c:	88 2f       	mov	r24, r24
+     92e:	90 e0       	ldi	r25, 0x00	; 0
+     930:	fc 01       	movw	r30, r24
+     932:	e1 5e       	subi	r30, 0xE1	; 225
+     934:	fb 4f       	sbci	r31, 0xFB	; 251
+     936:	10 82       	st	Z, r1
+     938:	80 91 54 04 	lds	r24, 0x0454
+     93c:	88 2f       	mov	r24, r24
+     93e:	90 e0       	ldi	r25, 0x00	; 0
+     940:	fc 01       	movw	r30, r24
+     942:	e3 53       	subi	r30, 0x33	; 51
+     944:	fb 4f       	sbci	r31, 0xFB	; 251
+     946:	10 82       	st	Z, r1
+						usart0_tx_menu = 1;
+     948:	81 e0       	ldi	r24, 0x01	; 1
+     94a:	80 93 2a 04 	sts	0x042A, r24
+						manager_password_idx = 0;
+     94e:	10 92 38 04 	sts	0x0438, r1
+						i = 0; j = -1;
+     952:	10 92 48 04 	sts	0x0448, r1
+     956:	10 92 47 04 	sts	0x0447, r1
+     95a:	8f ef       	ldi	r24, 0xFF	; 255
+     95c:	9f ef       	ldi	r25, 0xFF	; 255
+     95e:	90 93 4a 04 	sts	0x044A, r25
+     962:	80 93 49 04 	sts	0x0449, r24
+					}
+					j++;
+     966:	80 91 49 04 	lds	r24, 0x0449
+     96a:	90 91 4a 04 	lds	r25, 0x044A
+     96e:	01 96       	adiw	r24, 0x01	; 1
+     970:	90 93 4a 04 	sts	0x044A, r25
+     974:	80 93 49 04 	sts	0x0449, r24
+     978:	9c c3       	rjmp	.+1848   	; 0x10b2 <__vector_19+0xb62>
+			    }
+			    else
+				{	
+					if( i == 0 ) UDR0 = selected_locker + 48;
+     97a:	80 91 47 04 	lds	r24, 0x0447
+     97e:	90 91 48 04 	lds	r25, 0x0448
+     982:	00 97       	sbiw	r24, 0x00	; 0
+     984:	39 f4       	brne	.+14     	; 0x994 <__vector_19+0x444>
+     986:	ec e2       	ldi	r30, 0x2C	; 44
+     988:	f0 e0       	ldi	r31, 0x00	; 0
+     98a:	80 91 54 04 	lds	r24, 0x0454
+     98e:	80 5d       	subi	r24, 0xD0	; 208
+     990:	80 83       	st	Z, r24
+     992:	0b c0       	rjmp	.+22     	; 0x9aa <__vector_19+0x45a>
+					else UDR0 = unlock[i];
+     994:	ac e2       	ldi	r26, 0x2C	; 44
+     996:	b0 e0       	ldi	r27, 0x00	; 0
+     998:	80 91 47 04 	lds	r24, 0x0447
+     99c:	90 91 48 04 	lds	r25, 0x0448
+     9a0:	fc 01       	movw	r30, r24
+     9a2:	e4 5f       	subi	r30, 0xF4	; 244
+     9a4:	fc 4f       	sbci	r31, 0xFC	; 252
+     9a6:	80 81       	ld	r24, Z
+     9a8:	8c 93       	st	X, r24
+					i++;
+     9aa:	80 91 47 04 	lds	r24, 0x0447
+     9ae:	90 91 48 04 	lds	r25, 0x0448
+     9b2:	01 96       	adiw	r24, 0x01	; 1
+     9b4:	90 93 48 04 	sts	0x0448, r25
+     9b8:	80 93 47 04 	sts	0x0447, r24
+     9bc:	7a c3       	rjmp	.+1780   	; 0x10b2 <__vector_19+0xb62>
+				}
+			}
+			else // 관리자모드 보안 문자열 출력
+			{
+		        if(manager[i] == '\0')
+     9be:	80 91 47 04 	lds	r24, 0x0447
+     9c2:	90 91 48 04 	lds	r25, 0x0448
+     9c6:	fc 01       	movw	r30, r24
+     9c8:	ec 5a       	subi	r30, 0xAC	; 172
+     9ca:	fd 4f       	sbci	r31, 0xFD	; 253
+     9cc:	80 81       	ld	r24, Z
+     9ce:	88 23       	and	r24, r24
+     9d0:	71 f4       	brne	.+28     	; 0x9ee <__vector_19+0x49e>
+		        {
+		            UCSR0B = 0xD8;
+     9d2:	ea e2       	ldi	r30, 0x2A	; 42
+     9d4:	f0 e0       	ldi	r31, 0x00	; 0
+     9d6:	88 ed       	ldi	r24, 0xD8	; 216
+     9d8:	80 83       	st	Z, r24
+		            enterpass_mode = 1; // 바로 비밀번호 입력을 받을 수 있게 끔
+     9da:	81 e0       	ldi	r24, 0x01	; 1
+     9dc:	80 93 36 04 	sts	0x0436, r24
+					manager_password_idx = 0;
+     9e0:	10 92 38 04 	sts	0x0438, r1
+		            i = 0; 
+     9e4:	10 92 48 04 	sts	0x0448, r1
+     9e8:	10 92 47 04 	sts	0x0447, r1
+     9ec:	62 c3       	rjmp	.+1732   	; 0x10b2 <__vector_19+0xb62>
+		        }
+		        else
+		         	UDR0 = manager[i++];
+     9ee:	ac e2       	ldi	r26, 0x2C	; 44
+     9f0:	b0 e0       	ldi	r27, 0x00	; 0
+     9f2:	20 91 47 04 	lds	r18, 0x0447
+     9f6:	30 91 48 04 	lds	r19, 0x0448
+     9fa:	f9 01       	movw	r30, r18
+     9fc:	ec 5a       	subi	r30, 0xAC	; 172
+     9fe:	fd 4f       	sbci	r31, 0xFD	; 253
+     a00:	80 81       	ld	r24, Z
+     a02:	8c 93       	st	X, r24
+     a04:	c9 01       	movw	r24, r18
+     a06:	01 96       	adiw	r24, 0x01	; 1
+     a08:	90 93 48 04 	sts	0x0448, r25
+     a0c:	80 93 47 04 	sts	0x0447, r24
+     a10:	50 c3       	rjmp	.+1696   	; 0x10b2 <__vector_19+0xb62>
+			}
+	    }
+	}
+	else if(enterpass_mode) // 비밀번호 입력과 관련있음
+     a12:	80 91 36 04 	lds	r24, 0x0436
+     a16:	88 23       	and	r24, r24
+     a18:	09 f4       	brne	.+2      	; 0xa1c <__vector_19+0x4cc>
+     a1a:	4b c3       	rjmp	.+1686   	; 0x10b2 <__vector_19+0xb62>
+	{
+		if(keep_mode || find_mode)
+     a1c:	80 91 33 04 	lds	r24, 0x0433
+     a20:	88 23       	and	r24, r24
+     a22:	29 f4       	brne	.+10     	; 0xa2e <__vector_19+0x4de>
+     a24:	80 91 34 04 	lds	r24, 0x0434
+     a28:	88 23       	and	r24, r24
+     a2a:	09 f4       	brne	.+2      	; 0xa2e <__vector_19+0x4de>
+     a2c:	ff c1       	rjmp	.+1022   	; 0xe2c <__vector_19+0x8dc>
+		{
+			if(password_idx >= 6) // 비밀번호를 전부 입력했을 때의 문자열 출력
+     a2e:	80 91 37 04 	lds	r24, 0x0437
+     a32:	86 30       	cpi	r24, 0x06	; 6
+     a34:	08 f4       	brcc	.+2      	; 0xa38 <__vector_19+0x4e8>
+     a36:	c5 c1       	rjmp	.+906    	; 0xdc2 <__vector_19+0x872>
+			{
+    			if(keep_mode) // 물품 보관 성공
+     a38:	80 91 33 04 	lds	r24, 0x0433
+     a3c:	88 23       	and	r24, r24
+     a3e:	09 f4       	brne	.+2      	; 0xa42 <__vector_19+0x4f2>
+     a40:	41 c0       	rjmp	.+130    	; 0xac4 <__vector_19+0x574>
+    			{
+        			if(password_keep[i] == '\0')
+     a42:	80 91 47 04 	lds	r24, 0x0447
+     a46:	90 91 48 04 	lds	r25, 0x0448
+     a4a:	fc 01       	movw	r30, r24
+     a4c:	e4 57       	subi	r30, 0x74	; 116
+     a4e:	fc 4f       	sbci	r31, 0xFC	; 252
+     a50:	80 81       	ld	r24, Z
+     a52:	88 23       	and	r24, r24
+     a54:	31 f5       	brne	.+76     	; 0xaa2 <__vector_19+0x552>
+        			{
+						UCSR0B = 0xD8;
+     a56:	ea e2       	ldi	r30, 0x2A	; 42
+     a58:	f0 e0       	ldi	r31, 0x00	; 0
+     a5a:	88 ed       	ldi	r24, 0xD8	; 216
+     a5c:	80 83       	st	Z, r24
+            			locker_usage[selected_locker] = 1;
+     a5e:	80 91 54 04 	lds	r24, 0x0454
+     a62:	88 2f       	mov	r24, r24
+     a64:	90 e0       	ldi	r25, 0x00	; 0
+     a66:	fc 01       	movw	r30, r24
+     a68:	e1 5e       	subi	r30, 0xE1	; 225
+     a6a:	fb 4f       	sbci	r31, 0xFB	; 251
+     a6c:	81 e0       	ldi	r24, 0x01	; 1
+     a6e:	80 83       	st	Z, r24
+						keeping_seconds[selected_locker] = current_seconds;
+     a70:	80 91 54 04 	lds	r24, 0x0454
+     a74:	88 2f       	mov	r24, r24
+     a76:	90 e0       	ldi	r25, 0x00	; 0
+     a78:	20 91 39 04 	lds	r18, 0x0439
+     a7c:	30 91 3a 04 	lds	r19, 0x043A
+     a80:	88 0f       	add	r24, r24
+     a82:	99 1f       	adc	r25, r25
+     a84:	fc 01       	movw	r30, r24
+     a86:	e9 52       	subi	r30, 0x29	; 41
+     a88:	fb 4f       	sbci	r31, 0xFB	; 251
+     a8a:	31 83       	std	Z+1, r19	; 0x01
+     a8c:	20 83       	st	Z, r18
+            			usart0_tx_menu = 1;
+     a8e:	81 e0       	ldi	r24, 0x01	; 1
+     a90:	80 93 2a 04 	sts	0x042A, r24
+            			i = 0; password_idx = 0;
+     a94:	10 92 48 04 	sts	0x0448, r1
+     a98:	10 92 47 04 	sts	0x0447, r1
+     a9c:	10 92 37 04 	sts	0x0437, r1
+     aa0:	11 c0       	rjmp	.+34     	; 0xac4 <__vector_19+0x574>
+        			}
+        			else
+            			UDR0 = password_keep[i++];
+     aa2:	ac e2       	ldi	r26, 0x2C	; 44
+     aa4:	b0 e0       	ldi	r27, 0x00	; 0
+     aa6:	20 91 47 04 	lds	r18, 0x0447
+     aaa:	30 91 48 04 	lds	r19, 0x0448
+     aae:	f9 01       	movw	r30, r18
+     ab0:	e4 57       	subi	r30, 0x74	; 116
+     ab2:	fc 4f       	sbci	r31, 0xFC	; 252
+     ab4:	80 81       	ld	r24, Z
+     ab6:	8c 93       	st	X, r24
+     ab8:	c9 01       	movw	r24, r18
+     aba:	01 96       	adiw	r24, 0x01	; 1
+     abc:	90 93 48 04 	sts	0x0448, r25
+     ac0:	80 93 47 04 	sts	0x0447, r24
+    			}
+	    		if(find_mode) 
+     ac4:	80 91 34 04 	lds	r24, 0x0434
+     ac8:	88 23       	and	r24, r24
+     aca:	09 f4       	brne	.+2      	; 0xace <__vector_19+0x57e>
+     acc:	f2 c2       	rjmp	.+1508   	; 0x10b2 <__vector_19+0xb62>
+				{
+				    if(password_is_same()) // 물품 찾기 성공 (비밀번호 같음)
+     ace:	0e 94 75 09 	call	0x12ea	; 0x12ea <password_is_same>
+     ad2:	88 23       	and	r24, r24
+     ad4:	09 f4       	brne	.+2      	; 0xad8 <__vector_19+0x588>
+     ad6:	f0 c0       	rjmp	.+480    	; 0xcb8 <__vector_19+0x768>
+				    {
+				        if(password_same[i] == '\0') 
+     ad8:	80 91 47 04 	lds	r24, 0x0447
+     adc:	90 91 48 04 	lds	r25, 0x0448
+     ae0:	fc 01       	movw	r30, r24
+     ae2:	e4 53       	subi	r30, 0x34	; 52
+     ae4:	fc 4f       	sbci	r31, 0xFC	; 252
+     ae6:	80 81       	ld	r24, Z
+     ae8:	88 23       	and	r24, r24
+     aea:	09 f0       	breq	.+2      	; 0xaee <__vector_19+0x59e>
+     aec:	d3 c0       	rjmp	.+422    	; 0xc94 <__vector_19+0x744>
+				        {
+							if(j == 0)
+     aee:	80 91 49 04 	lds	r24, 0x0449
+     af2:	90 91 4a 04 	lds	r25, 0x044A
+     af6:	00 97       	sbiw	r24, 0x00	; 0
+     af8:	31 f5       	brne	.+76     	; 0xb46 <__vector_19+0x5f6>
+							{
+								using_seconds = current_seconds - keeping_seconds[selected_locker];
+     afa:	20 91 39 04 	lds	r18, 0x0439
+     afe:	30 91 3a 04 	lds	r19, 0x043A
+     b02:	80 91 54 04 	lds	r24, 0x0454
+     b06:	88 2f       	mov	r24, r24
+     b08:	90 e0       	ldi	r25, 0x00	; 0
+     b0a:	88 0f       	add	r24, r24
+     b0c:	99 1f       	adc	r25, r25
+     b0e:	fc 01       	movw	r30, r24
+     b10:	e9 52       	subi	r30, 0x29	; 41
+     b12:	fb 4f       	sbci	r31, 0xFB	; 251
+     b14:	80 81       	ld	r24, Z
+     b16:	91 81       	ldd	r25, Z+1	; 0x01
+     b18:	a9 01       	movw	r20, r18
+     b1a:	48 1b       	sub	r20, r24
+     b1c:	59 0b       	sbc	r21, r25
+     b1e:	ca 01       	movw	r24, r20
+     b20:	90 93 3c 04 	sts	0x043C, r25
+     b24:	80 93 3b 04 	sts	0x043B, r24
+								divide_seconds(using_seconds);
+     b28:	80 91 3b 04 	lds	r24, 0x043B
+     b2c:	90 91 3c 04 	lds	r25, 0x043C
+     b30:	0e 94 e0 09 	call	0x13c0	; 0x13c0 <divide_seconds>
+								UDR0 = tens_minutes + 48;
+     b34:	ec e2       	ldi	r30, 0x2C	; 44
+     b36:	f0 e0       	ldi	r31, 0x00	; 0
+     b38:	80 91 3d 04 	lds	r24, 0x043D
+     b3c:	90 91 3e 04 	lds	r25, 0x043E
+     b40:	80 5d       	subi	r24, 0xD0	; 208
+     b42:	80 83       	st	Z, r24
+     b44:	9d c0       	rjmp	.+314    	; 0xc80 <__vector_19+0x730>
+							}
+							else if(j == 1)
+     b46:	80 91 49 04 	lds	r24, 0x0449
+     b4a:	90 91 4a 04 	lds	r25, 0x044A
+     b4e:	81 30       	cpi	r24, 0x01	; 1
+     b50:	91 05       	cpc	r25, r1
+     b52:	49 f4       	brne	.+18     	; 0xb66 <__vector_19+0x616>
+								UDR0 = ones_minutes + 48;
+     b54:	ec e2       	ldi	r30, 0x2C	; 44
+     b56:	f0 e0       	ldi	r31, 0x00	; 0
+     b58:	80 91 3f 04 	lds	r24, 0x043F
+     b5c:	90 91 40 04 	lds	r25, 0x0440
+     b60:	80 5d       	subi	r24, 0xD0	; 208
+     b62:	80 83       	st	Z, r24
+     b64:	8d c0       	rjmp	.+282    	; 0xc80 <__vector_19+0x730>
+							else if(j == 2)
+     b66:	80 91 49 04 	lds	r24, 0x0449
+     b6a:	90 91 4a 04 	lds	r25, 0x044A
+     b6e:	82 30       	cpi	r24, 0x02	; 2
+     b70:	91 05       	cpc	r25, r1
+     b72:	29 f4       	brne	.+10     	; 0xb7e <__vector_19+0x62e>
+								UDR0 = ':';
+     b74:	ec e2       	ldi	r30, 0x2C	; 44
+     b76:	f0 e0       	ldi	r31, 0x00	; 0
+     b78:	8a e3       	ldi	r24, 0x3A	; 58
+     b7a:	80 83       	st	Z, r24
+     b7c:	81 c0       	rjmp	.+258    	; 0xc80 <__vector_19+0x730>
+							else if(j == 3)
+     b7e:	80 91 49 04 	lds	r24, 0x0449
+     b82:	90 91 4a 04 	lds	r25, 0x044A
+     b86:	83 30       	cpi	r24, 0x03	; 3
+     b88:	91 05       	cpc	r25, r1
+     b8a:	49 f4       	brne	.+18     	; 0xb9e <__vector_19+0x64e>
+								UDR0 = tens_seconds + 48;
+     b8c:	ec e2       	ldi	r30, 0x2C	; 44
+     b8e:	f0 e0       	ldi	r31, 0x00	; 0
+     b90:	80 91 41 04 	lds	r24, 0x0441
+     b94:	90 91 42 04 	lds	r25, 0x0442
+     b98:	80 5d       	subi	r24, 0xD0	; 208
+     b9a:	80 83       	st	Z, r24
+     b9c:	71 c0       	rjmp	.+226    	; 0xc80 <__vector_19+0x730>
+							else if(j == 4)
+     b9e:	80 91 49 04 	lds	r24, 0x0449
+     ba2:	90 91 4a 04 	lds	r25, 0x044A
+     ba6:	84 30       	cpi	r24, 0x04	; 4
+     ba8:	91 05       	cpc	r25, r1
+     baa:	49 f4       	brne	.+18     	; 0xbbe <__vector_19+0x66e>
+								UDR0 = ones_seconds + 48;
+     bac:	ec e2       	ldi	r30, 0x2C	; 44
+     bae:	f0 e0       	ldi	r31, 0x00	; 0
+     bb0:	80 91 43 04 	lds	r24, 0x0443
+     bb4:	90 91 44 04 	lds	r25, 0x0444
+     bb8:	80 5d       	subi	r24, 0xD0	; 208
+     bba:	80 83       	st	Z, r24
+     bbc:	61 c0       	rjmp	.+194    	; 0xc80 <__vector_19+0x730>
+							else if(j == 5)
+     bbe:	80 91 49 04 	lds	r24, 0x0449
+     bc2:	90 91 4a 04 	lds	r25, 0x044A
+     bc6:	85 30       	cpi	r24, 0x05	; 5
+     bc8:	91 05       	cpc	r25, r1
+     bca:	29 f4       	brne	.+10     	; 0xbd6 <__vector_19+0x686>
+								UDR0 = ' ';
+     bcc:	ec e2       	ldi	r30, 0x2C	; 44
+     bce:	f0 e0       	ldi	r31, 0x00	; 0
+     bd0:	80 e2       	ldi	r24, 0x20	; 32
+     bd2:	80 83       	st	Z, r24
+     bd4:	55 c0       	rjmp	.+170    	; 0xc80 <__vector_19+0x730>
+							else if(j == 6)
+     bd6:	80 91 49 04 	lds	r24, 0x0449
+     bda:	90 91 4a 04 	lds	r25, 0x044A
+     bde:	86 30       	cpi	r24, 0x06	; 6
+     be0:	91 05       	cpc	r25, r1
+     be2:	79 f4       	brne	.+30     	; 0xc02 <__vector_19+0x6b2>
+								UDR0 = (using_seconds / SECONDS_PER_DOLLAR + 1) + 48; // 30초당 1달러
+     be4:	ec e2       	ldi	r30, 0x2C	; 44
+     be6:	f0 e0       	ldi	r31, 0x00	; 0
+     be8:	80 91 3b 04 	lds	r24, 0x043B
+     bec:	90 91 3c 04 	lds	r25, 0x043C
+     bf0:	2c e3       	ldi	r18, 0x3C	; 60
+     bf2:	30 e0       	ldi	r19, 0x00	; 0
+     bf4:	b9 01       	movw	r22, r18
+     bf6:	0e 94 5e 0a 	call	0x14bc	; 0x14bc <__divmodhi4>
+     bfa:	cb 01       	movw	r24, r22
+     bfc:	8f 5c       	subi	r24, 0xCF	; 207
+     bfe:	80 83       	st	Z, r24
+     c00:	3f c0       	rjmp	.+126    	; 0xc80 <__vector_19+0x730>
+							else if(j == 7)
+     c02:	80 91 49 04 	lds	r24, 0x0449
+     c06:	90 91 4a 04 	lds	r25, 0x044A
+     c0a:	87 30       	cpi	r24, 0x07	; 7
+     c0c:	91 05       	cpc	r25, r1
+     c0e:	29 f4       	brne	.+10     	; 0xc1a <__vector_19+0x6ca>
+								UDR0 = '$';
+     c10:	ec e2       	ldi	r30, 0x2C	; 44
+     c12:	f0 e0       	ldi	r31, 0x00	; 0
+     c14:	84 e2       	ldi	r24, 0x24	; 36
+     c16:	80 83       	st	Z, r24
+     c18:	33 c0       	rjmp	.+102    	; 0xc80 <__vector_19+0x730>
+							else if(j == 8)
+     c1a:	80 91 49 04 	lds	r24, 0x0449
+     c1e:	90 91 4a 04 	lds	r25, 0x044A
+     c22:	88 30       	cpi	r24, 0x08	; 8
+     c24:	91 05       	cpc	r25, r1
+     c26:	29 f4       	brne	.+10     	; 0xc32 <__vector_19+0x6e2>
+								UDR0 = '\r';
+     c28:	ec e2       	ldi	r30, 0x2C	; 44
+     c2a:	f0 e0       	ldi	r31, 0x00	; 0
+     c2c:	8d e0       	ldi	r24, 0x0D	; 13
+     c2e:	80 83       	st	Z, r24
+     c30:	27 c0       	rjmp	.+78     	; 0xc80 <__vector_19+0x730>
+
+							else 
+							{
+								UDR0 = '\n';
+     c32:	ec e2       	ldi	r30, 0x2C	; 44
+     c34:	f0 e0       	ldi	r31, 0x00	; 0
+     c36:	8a e0       	ldi	r24, 0x0A	; 10
+     c38:	80 83       	st	Z, r24
+								UCSR0B = 0xD8;
+     c3a:	ea e2       	ldi	r30, 0x2A	; 42
+     c3c:	f0 e0       	ldi	r31, 0x00	; 0
+     c3e:	88 ed       	ldi	r24, 0xD8	; 216
+     c40:	80 83       	st	Z, r24
+				          	  	locker_usage[selected_locker] = 0;
+     c42:	80 91 54 04 	lds	r24, 0x0454
+     c46:	88 2f       	mov	r24, r24
+     c48:	90 e0       	ldi	r25, 0x00	; 0
+     c4a:	fc 01       	movw	r30, r24
+     c4c:	e1 5e       	subi	r30, 0xE1	; 225
+     c4e:	fb 4f       	sbci	r31, 0xFB	; 251
+     c50:	10 82       	st	Z, r1
+								password_error_cnt[selected_locker] = 0; // 틀린 횟수 초기화
+     c52:	80 91 54 04 	lds	r24, 0x0454
+     c56:	88 2f       	mov	r24, r24
+     c58:	90 e0       	ldi	r25, 0x00	; 0
+     c5a:	fc 01       	movw	r30, r24
+     c5c:	e3 53       	subi	r30, 0x33	; 51
+     c5e:	fb 4f       	sbci	r31, 0xFB	; 251
+     c60:	10 82       	st	Z, r1
+				         	   	usart0_tx_menu = 1;
+     c62:	81 e0       	ldi	r24, 0x01	; 1
+     c64:	80 93 2a 04 	sts	0x042A, r24
+				           		i = 0; j = -1; password_idx = 0;
+     c68:	10 92 48 04 	sts	0x0448, r1
+     c6c:	10 92 47 04 	sts	0x0447, r1
+     c70:	8f ef       	ldi	r24, 0xFF	; 255
+     c72:	9f ef       	ldi	r25, 0xFF	; 255
+     c74:	90 93 4a 04 	sts	0x044A, r25
+     c78:	80 93 49 04 	sts	0x0449, r24
+     c7c:	10 92 37 04 	sts	0x0437, r1
+							}			
+							j++;
+     c80:	80 91 49 04 	lds	r24, 0x0449
+     c84:	90 91 4a 04 	lds	r25, 0x044A
+     c88:	01 96       	adiw	r24, 0x01	; 1
+     c8a:	90 93 4a 04 	sts	0x044A, r25
+     c8e:	80 93 49 04 	sts	0x0449, r24
+     c92:	0f c2       	rjmp	.+1054   	; 0x10b2 <__vector_19+0xb62>
+				        } 	
+				        else 
+				            UDR0 = password_same[i++];
+     c94:	ac e2       	ldi	r26, 0x2C	; 44
+     c96:	b0 e0       	ldi	r27, 0x00	; 0
+     c98:	20 91 47 04 	lds	r18, 0x0447
+     c9c:	30 91 48 04 	lds	r19, 0x0448
+     ca0:	f9 01       	movw	r30, r18
+     ca2:	e4 53       	subi	r30, 0x34	; 52
+     ca4:	fc 4f       	sbci	r31, 0xFC	; 252
+     ca6:	80 81       	ld	r24, Z
+     ca8:	8c 93       	st	X, r24
+     caa:	c9 01       	movw	r24, r18
+     cac:	01 96       	adiw	r24, 0x01	; 1
+     cae:	90 93 48 04 	sts	0x0448, r25
+     cb2:	80 93 47 04 	sts	0x0447, r24
+     cb6:	fd c1       	rjmp	.+1018   	; 0x10b2 <__vector_19+0xb62>
+				    } 
+				    else 
+				    { // 물품 찾기 실패 (비밀번호 다름) 
+				        if(password_wrong[i] == '\0') 
+     cb8:	80 91 47 04 	lds	r24, 0x0447
+     cbc:	90 91 48 04 	lds	r25, 0x0448
+     cc0:	fc 01       	movw	r30, r24
+     cc2:	e8 55       	subi	r30, 0x58	; 88
+     cc4:	fc 4f       	sbci	r31, 0xFC	; 252
+     cc6:	80 81       	ld	r24, Z
+     cc8:	88 23       	and	r24, r24
+     cca:	09 f0       	breq	.+2      	; 0xcce <__vector_19+0x77e>
+     ccc:	68 c0       	rjmp	.+208    	; 0xd9e <__vector_19+0x84e>
+				        {
+							if(j == 0 )	UDR0 = ++password_error_cnt[selected_locker] + 48;
+     cce:	80 91 49 04 	lds	r24, 0x0449
+     cd2:	90 91 4a 04 	lds	r25, 0x044A
+     cd6:	00 97       	sbiw	r24, 0x00	; 0
+     cd8:	b1 f4       	brne	.+44     	; 0xd06 <__vector_19+0x7b6>
+     cda:	ac e2       	ldi	r26, 0x2C	; 44
+     cdc:	b0 e0       	ldi	r27, 0x00	; 0
+     cde:	80 91 54 04 	lds	r24, 0x0454
+     ce2:	88 2f       	mov	r24, r24
+     ce4:	90 e0       	ldi	r25, 0x00	; 0
+     ce6:	fc 01       	movw	r30, r24
+     ce8:	e3 53       	subi	r30, 0x33	; 51
+     cea:	fb 4f       	sbci	r31, 0xFB	; 251
+     cec:	20 81       	ld	r18, Z
+     cee:	2f 5f       	subi	r18, 0xFF	; 255
+     cf0:	fc 01       	movw	r30, r24
+     cf2:	e3 53       	subi	r30, 0x33	; 51
+     cf4:	fb 4f       	sbci	r31, 0xFB	; 251
+     cf6:	20 83       	st	Z, r18
+     cf8:	fc 01       	movw	r30, r24
+     cfa:	e3 53       	subi	r30, 0x33	; 51
+     cfc:	fb 4f       	sbci	r31, 0xFB	; 251
+     cfe:	80 81       	ld	r24, Z
+     d00:	80 5d       	subi	r24, 0xD0	; 208
+     d02:	8c 93       	st	X, r24
+     d04:	42 c0       	rjmp	.+132    	; 0xd8a <__vector_19+0x83a>
+							else if(j == 1)	UDR0 = '\r';
+     d06:	80 91 49 04 	lds	r24, 0x0449
+     d0a:	90 91 4a 04 	lds	r25, 0x044A
+     d0e:	81 30       	cpi	r24, 0x01	; 1
+     d10:	91 05       	cpc	r25, r1
+     d12:	29 f4       	brne	.+10     	; 0xd1e <__vector_19+0x7ce>
+     d14:	ec e2       	ldi	r30, 0x2C	; 44
+     d16:	f0 e0       	ldi	r31, 0x00	; 0
+     d18:	8d e0       	ldi	r24, 0x0D	; 13
+     d1a:	80 83       	st	Z, r24
+     d1c:	36 c0       	rjmp	.+108    	; 0xd8a <__vector_19+0x83a>
+							else if(j == 2) UDR0 = '\n';
+     d1e:	80 91 49 04 	lds	r24, 0x0449
+     d22:	90 91 4a 04 	lds	r25, 0x044A
+     d26:	82 30       	cpi	r24, 0x02	; 2
+     d28:	91 05       	cpc	r25, r1
+     d2a:	29 f4       	brne	.+10     	; 0xd36 <__vector_19+0x7e6>
+     d2c:	ec e2       	ldi	r30, 0x2C	; 44
+     d2e:	f0 e0       	ldi	r31, 0x00	; 0
+     d30:	8a e0       	ldi	r24, 0x0A	; 10
+     d32:	80 83       	st	Z, r24
+     d34:	2a c0       	rjmp	.+84     	; 0xd8a <__vector_19+0x83a>
+							else
+							{
+								UDR0 = '\a';
+     d36:	ec e2       	ldi	r30, 0x2C	; 44
+     d38:	f0 e0       	ldi	r31, 0x00	; 0
+     d3a:	87 e0       	ldi	r24, 0x07	; 7
+     d3c:	80 83       	st	Z, r24
+								UCSR0B = 0xD8;
+     d3e:	ea e2       	ldi	r30, 0x2A	; 42
+     d40:	f0 e0       	ldi	r31, 0x00	; 0
+     d42:	88 ed       	ldi	r24, 0xD8	; 216
+     d44:	80 83       	st	Z, r24
+								if(password_error_cnt[selected_locker] >= 3) 
+     d46:	80 91 54 04 	lds	r24, 0x0454
+     d4a:	88 2f       	mov	r24, r24
+     d4c:	90 e0       	ldi	r25, 0x00	; 0
+     d4e:	fc 01       	movw	r30, r24
+     d50:	e3 53       	subi	r30, 0x33	; 51
+     d52:	fb 4f       	sbci	r31, 0xFB	; 251
+     d54:	80 81       	ld	r24, Z
+     d56:	83 30       	cpi	r24, 0x03	; 3
+     d58:	60 f0       	brcs	.+24     	; 0xd72 <__vector_19+0x822>
+								{
+									locker_usage[selected_locker] = 2;
+     d5a:	80 91 54 04 	lds	r24, 0x0454
+     d5e:	88 2f       	mov	r24, r24
+     d60:	90 e0       	ldi	r25, 0x00	; 0
+     d62:	fc 01       	movw	r30, r24
+     d64:	e1 5e       	subi	r30, 0xE1	; 225
+     d66:	fb 4f       	sbci	r31, 0xFB	; 251
+     d68:	82 e0       	ldi	r24, 0x02	; 2
+     d6a:	80 83       	st	Z, r24
+									usart0_tx_menu = 1;
+     d6c:	81 e0       	ldi	r24, 0x01	; 1
+     d6e:	80 93 2a 04 	sts	0x042A, r24
+								}
+				            	i = 0; j = -1; password_idx = 0;
+     d72:	10 92 48 04 	sts	0x0448, r1
+     d76:	10 92 47 04 	sts	0x0447, r1
+     d7a:	8f ef       	ldi	r24, 0xFF	; 255
+     d7c:	9f ef       	ldi	r25, 0xFF	; 255
+     d7e:	90 93 4a 04 	sts	0x044A, r25
+     d82:	80 93 49 04 	sts	0x0449, r24
+     d86:	10 92 37 04 	sts	0x0437, r1
+							}
+							j++;
+     d8a:	80 91 49 04 	lds	r24, 0x0449
+     d8e:	90 91 4a 04 	lds	r25, 0x044A
+     d92:	01 96       	adiw	r24, 0x01	; 1
+     d94:	90 93 4a 04 	sts	0x044A, r25
+     d98:	80 93 49 04 	sts	0x0449, r24
+     d9c:	8a c1       	rjmp	.+788    	; 0x10b2 <__vector_19+0xb62>
+				        }
+				        else 
+				        {
+				            UDR0 = password_wrong[i++];
+     d9e:	ac e2       	ldi	r26, 0x2C	; 44
+     da0:	b0 e0       	ldi	r27, 0x00	; 0
+     da2:	20 91 47 04 	lds	r18, 0x0447
+     da6:	30 91 48 04 	lds	r19, 0x0448
+     daa:	f9 01       	movw	r30, r18
+     dac:	e8 55       	subi	r30, 0x58	; 88
+     dae:	fc 4f       	sbci	r31, 0xFC	; 252
+     db0:	80 81       	ld	r24, Z
+     db2:	8c 93       	st	X, r24
+     db4:	c9 01       	movw	r24, r18
+     db6:	01 96       	adiw	r24, 0x01	; 1
+     db8:	90 93 48 04 	sts	0x0448, r25
+     dbc:	80 93 47 04 	sts	0x0447, r24
+     dc0:	78 c1       	rjmp	.+752    	; 0x10b2 <__vector_19+0xb62>
+				    }
+				}
+			}
+			else // 비밀번호 입력 받기 전 문자열 출력
+			{
+				if(enterpass[i] == '\0')
+     dc2:	80 91 47 04 	lds	r24, 0x0447
+     dc6:	90 91 48 04 	lds	r25, 0x0448
+     dca:	fc 01       	movw	r30, r24
+     dcc:	e1 5c       	subi	r30, 0xC1	; 193
+     dce:	fc 4f       	sbci	r31, 0xFC	; 252
+     dd0:	80 81       	ld	r24, Z
+     dd2:	88 23       	and	r24, r24
+     dd4:	49 f4       	brne	.+18     	; 0xde8 <__vector_19+0x898>
+				{
+					UCSR0B = 0xD8;
+     dd6:	ea e2       	ldi	r30, 0x2A	; 42
+     dd8:	f0 e0       	ldi	r31, 0x00	; 0
+     dda:	88 ed       	ldi	r24, 0xD8	; 216
+     ddc:	80 83       	st	Z, r24
+					i = 0; 
+     dde:	10 92 48 04 	sts	0x0448, r1
+     de2:	10 92 47 04 	sts	0x0447, r1
+     de6:	65 c1       	rjmp	.+714    	; 0x10b2 <__vector_19+0xb62>
+				}
+				else
+				{	
+					if( i == 0 ) UDR0 = selected_locker + 48;
+     de8:	80 91 47 04 	lds	r24, 0x0447
+     dec:	90 91 48 04 	lds	r25, 0x0448
+     df0:	00 97       	sbiw	r24, 0x00	; 0
+     df2:	39 f4       	brne	.+14     	; 0xe02 <__vector_19+0x8b2>
+     df4:	ec e2       	ldi	r30, 0x2C	; 44
+     df6:	f0 e0       	ldi	r31, 0x00	; 0
+     df8:	80 91 54 04 	lds	r24, 0x0454
+     dfc:	80 5d       	subi	r24, 0xD0	; 208
+     dfe:	80 83       	st	Z, r24
+     e00:	0b c0       	rjmp	.+22     	; 0xe18 <__vector_19+0x8c8>
+					else UDR0 = enterpass[i];
+     e02:	ac e2       	ldi	r26, 0x2C	; 44
+     e04:	b0 e0       	ldi	r27, 0x00	; 0
+     e06:	80 91 47 04 	lds	r24, 0x0447
+     e0a:	90 91 48 04 	lds	r25, 0x0448
+     e0e:	fc 01       	movw	r30, r24
+     e10:	e1 5c       	subi	r30, 0xC1	; 193
+     e12:	fc 4f       	sbci	r31, 0xFC	; 252
+     e14:	80 81       	ld	r24, Z
+     e16:	8c 93       	st	X, r24
+					i++;
+     e18:	80 91 47 04 	lds	r24, 0x0447
+     e1c:	90 91 48 04 	lds	r25, 0x0448
+     e20:	01 96       	adiw	r24, 0x01	; 1
+     e22:	90 93 48 04 	sts	0x0448, r25
+     e26:	80 93 47 04 	sts	0x0447, r24
+     e2a:	43 c1       	rjmp	.+646    	; 0x10b2 <__vector_19+0xb62>
+				}
+			}
+		}
+		else // 관리자 모드
+		{	
+			if(manager_password_idx >= 6) // 비밀번호를 전부 입력했을 때의 문자열 출력
+     e2c:	80 91 38 04 	lds	r24, 0x0438
+     e30:	86 30       	cpi	r24, 0x06	; 6
+     e32:	08 f4       	brcc	.+2      	; 0xe36 <__vector_19+0x8e6>
+     e34:	3e c1       	rjmp	.+636    	; 0x10b2 <__vector_19+0xb62>
+			{
+				if(password_is_same())  // 관리자 비밀번호 같음
+     e36:	0e 94 75 09 	call	0x12ea	; 0x12ea <password_is_same>
+     e3a:	88 23       	and	r24, r24
+     e3c:	09 f4       	brne	.+2      	; 0xe40 <__vector_19+0x8f0>
+     e3e:	0f c1       	rjmp	.+542    	; 0x105e <__vector_19+0xb0e>
+				{	
+					if(in_manager[i] == '\0') // 관리자모드 관련문자열이 끝나면
+     e40:	80 91 47 04 	lds	r24, 0x0447
+     e44:	90 91 48 04 	lds	r25, 0x0448
+     e48:	fc 01       	movw	r30, r24
+     e4a:	e4 56       	subi	r30, 0x64	; 100
+     e4c:	fd 4f       	sbci	r31, 0xFD	; 253
+     e4e:	80 81       	ld	r24, Z
+     e50:	88 23       	and	r24, r24
+     e52:	09 f0       	breq	.+2      	; 0xe56 <__vector_19+0x906>
+     e54:	f2 c0       	rjmp	.+484    	; 0x103a <__vector_19+0xaea>
+					{
+						if(j == 0) // 사물함 현황 출력
+     e56:	80 91 49 04 	lds	r24, 0x0449
+     e5a:	90 91 4a 04 	lds	r25, 0x044A
+     e5e:	00 97       	sbiw	r24, 0x00	; 0
+     e60:	09 f0       	breq	.+2      	; 0xe64 <__vector_19+0x914>
+     e62:	4d c0       	rjmp	.+154    	; 0xefe <__vector_19+0x9ae>
+						{
+							if(locker_idx >= 1 && locker_idx <= 9)
+     e64:	80 91 29 04 	lds	r24, 0x0429
+     e68:	88 23       	and	r24, r24
+     e6a:	39 f1       	breq	.+78     	; 0xeba <__vector_19+0x96a>
+     e6c:	80 91 29 04 	lds	r24, 0x0429
+     e70:	8a 30       	cpi	r24, 0x0A	; 10
+     e72:	18 f5       	brcc	.+70     	; 0xeba <__vector_19+0x96a>
+		            		{
+		                		if(locker_usage[locker_idx] == 1) UDR0 = 'X'; // 사물함이 사용중이면  
+     e74:	80 91 29 04 	lds	r24, 0x0429
+     e78:	88 2f       	mov	r24, r24
+     e7a:	90 e0       	ldi	r25, 0x00	; 0
+     e7c:	fc 01       	movw	r30, r24
+     e7e:	e1 5e       	subi	r30, 0xE1	; 225
+     e80:	fb 4f       	sbci	r31, 0xFB	; 251
+     e82:	80 81       	ld	r24, Z
+     e84:	81 30       	cpi	r24, 0x01	; 1
+     e86:	29 f4       	brne	.+10     	; 0xe92 <__vector_19+0x942>
+     e88:	ec e2       	ldi	r30, 0x2C	; 44
+     e8a:	f0 e0       	ldi	r31, 0x00	; 0
+     e8c:	88 e5       	ldi	r24, 0x58	; 88
+     e8e:	80 83       	st	Z, r24
+     e90:	30 c0       	rjmp	.+96     	; 0xef2 <__vector_19+0x9a2>
+		                		else if(locker_usage[locker_idx] == 0) UDR0 = 'O';// 사물함이 비어 있으면
+     e92:	80 91 29 04 	lds	r24, 0x0429
+     e96:	88 2f       	mov	r24, r24
+     e98:	90 e0       	ldi	r25, 0x00	; 0
+     e9a:	fc 01       	movw	r30, r24
+     e9c:	e1 5e       	subi	r30, 0xE1	; 225
+     e9e:	fb 4f       	sbci	r31, 0xFB	; 251
+     ea0:	80 81       	ld	r24, Z
+     ea2:	88 23       	and	r24, r24
+     ea4:	29 f4       	brne	.+10     	; 0xeb0 <__vector_19+0x960>
+     ea6:	ec e2       	ldi	r30, 0x2C	; 44
+     ea8:	f0 e0       	ldi	r31, 0x00	; 0
+     eaa:	8f e4       	ldi	r24, 0x4F	; 79
+     eac:	80 83       	st	Z, r24
+     eae:	21 c0       	rjmp	.+66     	; 0xef2 <__vector_19+0x9a2>
+								else  UDR0 = 'L';// 사물함이 잠겨 있으면
+     eb0:	ec e2       	ldi	r30, 0x2C	; 44
+     eb2:	f0 e0       	ldi	r31, 0x00	; 0
+     eb4:	8c e4       	ldi	r24, 0x4C	; 76
+     eb6:	80 83       	st	Z, r24
+     eb8:	1c c0       	rjmp	.+56     	; 0xef2 <__vector_19+0x9a2>
+		            		}
+		            		else if(locker_idx == 10)
+     eba:	80 91 29 04 	lds	r24, 0x0429
+     ebe:	8a 30       	cpi	r24, 0x0A	; 10
+     ec0:	29 f4       	brne	.+10     	; 0xecc <__vector_19+0x97c>
+		                		UDR0 = '\r';
+     ec2:	ec e2       	ldi	r30, 0x2C	; 44
+     ec4:	f0 e0       	ldi	r31, 0x00	; 0
+     ec6:	8d e0       	ldi	r24, 0x0D	; 13
+     ec8:	80 83       	st	Z, r24
+     eca:	13 c0       	rjmp	.+38     	; 0xef2 <__vector_19+0x9a2>
+			            	else if(locker_idx == 11)
+     ecc:	80 91 29 04 	lds	r24, 0x0429
+     ed0:	8b 30       	cpi	r24, 0x0B	; 11
+     ed2:	79 f4       	brne	.+30     	; 0xef2 <__vector_19+0x9a2>
+			            	{
+			                	UDR0 = '\n';
+     ed4:	ec e2       	ldi	r30, 0x2C	; 44
+     ed6:	f0 e0       	ldi	r31, 0x00	; 0
+     ed8:	8a e0       	ldi	r24, 0x0A	; 10
+     eda:	80 83       	st	Z, r24
+								locker_idx = 0; j++;
+     edc:	10 92 29 04 	sts	0x0429, r1
+     ee0:	80 91 49 04 	lds	r24, 0x0449
+     ee4:	90 91 4a 04 	lds	r25, 0x044A
+     ee8:	01 96       	adiw	r24, 0x01	; 1
+     eea:	90 93 4a 04 	sts	0x044A, r25
+     eee:	80 93 49 04 	sts	0x0449, r24
+			            	}
+							locker_idx++;
+     ef2:	80 91 29 04 	lds	r24, 0x0429
+     ef6:	8f 5f       	subi	r24, 0xFF	; 255
+     ef8:	80 93 29 04 	sts	0x0429, r24
+     efc:	da c0       	rjmp	.+436    	; 0x10b2 <__vector_19+0xb62>
+						}
+						else // j가 0에서 1이 되면서 잠겨있는 사물함 비밀번호 출력 
+						{
+							if(locker_idx >= 10) // 사물함 비밀번호를 모두 출력한 상태면
+     efe:	80 91 29 04 	lds	r24, 0x0429
+     f02:	8a 30       	cpi	r24, 0x0A	; 10
+     f04:	28 f1       	brcs	.+74     	; 0xf50 <__vector_19+0xa00>
+							{
+								if(locker_idx == 10 )UDR0 = '\r';
+     f06:	80 91 29 04 	lds	r24, 0x0429
+     f0a:	8a 30       	cpi	r24, 0x0A	; 10
+     f0c:	29 f4       	brne	.+10     	; 0xf18 <__vector_19+0x9c8>
+     f0e:	ec e2       	ldi	r30, 0x2C	; 44
+     f10:	f0 e0       	ldi	r31, 0x00	; 0
+     f12:	8d e0       	ldi	r24, 0x0D	; 13
+     f14:	80 83       	st	Z, r24
+     f16:	16 c0       	rjmp	.+44     	; 0xf44 <__vector_19+0x9f4>
+								else
+								{
+									UCSR0B = 0xD8;
+     f18:	ea e2       	ldi	r30, 0x2A	; 42
+     f1a:	f0 e0       	ldi	r31, 0x00	; 0
+     f1c:	88 ed       	ldi	r24, 0xD8	; 216
+     f1e:	80 83       	st	Z, r24
+									UDR0 = '\n';
+     f20:	ec e2       	ldi	r30, 0x2C	; 44
+     f22:	f0 e0       	ldi	r31, 0x00	; 0
+     f24:	8a e0       	ldi	r24, 0x0A	; 10
+     f26:	80 83       	st	Z, r24
+									enterpass_mode = 0; // 잠긴 사물함 선택을 할 수 있도록
+     f28:	10 92 36 04 	sts	0x0436, r1
+									i = 0; j = 0; password_idx = 0; locker_idx = 0;
+     f2c:	10 92 48 04 	sts	0x0448, r1
+     f30:	10 92 47 04 	sts	0x0447, r1
+     f34:	10 92 4a 04 	sts	0x044A, r1
+     f38:	10 92 49 04 	sts	0x0449, r1
+     f3c:	10 92 37 04 	sts	0x0437, r1
+     f40:	10 92 29 04 	sts	0x0429, r1
+								}
+								locker_idx++;
+     f44:	80 91 29 04 	lds	r24, 0x0429
+     f48:	8f 5f       	subi	r24, 0xFF	; 255
+     f4a:	80 93 29 04 	sts	0x0429, r24
+     f4e:	b1 c0       	rjmp	.+354    	; 0x10b2 <__vector_19+0xb62>
+							}	
+							else if(locker_usage[locker_idx] == 1) // 보관된 사물함 비밀번호 출력
+     f50:	80 91 29 04 	lds	r24, 0x0429
+     f54:	88 2f       	mov	r24, r24
+     f56:	90 e0       	ldi	r25, 0x00	; 0
+     f58:	fc 01       	movw	r30, r24
+     f5a:	e1 5e       	subi	r30, 0xE1	; 225
+     f5c:	fb 4f       	sbci	r31, 0xFB	; 251
+     f5e:	80 81       	ld	r24, Z
+     f60:	81 30       	cpi	r24, 0x01	; 1
+     f62:	09 f0       	breq	.+2      	; 0xf66 <__vector_19+0xa16>
+     f64:	64 c0       	rjmp	.+200    	; 0x102e <__vector_19+0xade>
+							{
+								if(password_idx == 6) 
+     f66:	80 91 37 04 	lds	r24, 0x0437
+     f6a:	86 30       	cpi	r24, 0x06	; 6
+     f6c:	91 f4       	brne	.+36     	; 0xf92 <__vector_19+0xa42>
+								{
+									UDR0 = ' ';
+     f6e:	ec e2       	ldi	r30, 0x2C	; 44
+     f70:	f0 e0       	ldi	r31, 0x00	; 0
+     f72:	80 e2       	ldi	r24, 0x20	; 32
+     f74:	80 83       	st	Z, r24
+									locker_idx++;
+     f76:	80 91 29 04 	lds	r24, 0x0429
+     f7a:	8f 5f       	subi	r24, 0xFF	; 255
+     f7c:	80 93 29 04 	sts	0x0429, r24
+									password_idx = 0; j = 1;
+     f80:	10 92 37 04 	sts	0x0437, r1
+     f84:	81 e0       	ldi	r24, 0x01	; 1
+     f86:	90 e0       	ldi	r25, 0x00	; 0
+     f88:	90 93 4a 04 	sts	0x044A, r25
+     f8c:	80 93 49 04 	sts	0x0449, r24
+     f90:	90 c0       	rjmp	.+288    	; 0x10b2 <__vector_19+0xb62>
+								}
+								else
+								{
+									if(j == 1) UDR0 = '#';
+     f92:	80 91 49 04 	lds	r24, 0x0449
+     f96:	90 91 4a 04 	lds	r25, 0x044A
+     f9a:	81 30       	cpi	r24, 0x01	; 1
+     f9c:	91 05       	cpc	r25, r1
+     f9e:	29 f4       	brne	.+10     	; 0xfaa <__vector_19+0xa5a>
+     fa0:	ec e2       	ldi	r30, 0x2C	; 44
+     fa2:	f0 e0       	ldi	r31, 0x00	; 0
+     fa4:	83 e2       	ldi	r24, 0x23	; 35
+     fa6:	80 83       	st	Z, r24
+     fa8:	38 c0       	rjmp	.+112    	; 0x101a <__vector_19+0xaca>
+									else if(j == 2) UDR0 = locker_idx + 48;
+     faa:	80 91 49 04 	lds	r24, 0x0449
+     fae:	90 91 4a 04 	lds	r25, 0x044A
+     fb2:	82 30       	cpi	r24, 0x02	; 2
+     fb4:	91 05       	cpc	r25, r1
+     fb6:	39 f4       	brne	.+14     	; 0xfc6 <__vector_19+0xa76>
+     fb8:	ec e2       	ldi	r30, 0x2C	; 44
+     fba:	f0 e0       	ldi	r31, 0x00	; 0
+     fbc:	80 91 29 04 	lds	r24, 0x0429
+     fc0:	80 5d       	subi	r24, 0xD0	; 208
+     fc2:	80 83       	st	Z, r24
+     fc4:	2a c0       	rjmp	.+84     	; 0x101a <__vector_19+0xaca>
+									else if(j == 3) UDR0 = ':';
+     fc6:	80 91 49 04 	lds	r24, 0x0449
+     fca:	90 91 4a 04 	lds	r25, 0x044A
+     fce:	83 30       	cpi	r24, 0x03	; 3
+     fd0:	91 05       	cpc	r25, r1
+     fd2:	29 f4       	brne	.+10     	; 0xfde <__vector_19+0xa8e>
+     fd4:	ec e2       	ldi	r30, 0x2C	; 44
+     fd6:	f0 e0       	ldi	r31, 0x00	; 0
+     fd8:	8a e3       	ldi	r24, 0x3A	; 58
+     fda:	80 83       	st	Z, r24
+     fdc:	1e c0       	rjmp	.+60     	; 0x101a <__vector_19+0xaca>
+									else	
+									{
+										UDR0 = locker_password[locker_idx][password_idx] + 48;
+     fde:	ac e2       	ldi	r26, 0x2C	; 44
+     fe0:	b0 e0       	ldi	r27, 0x00	; 0
+     fe2:	80 91 29 04 	lds	r24, 0x0429
+     fe6:	28 2f       	mov	r18, r24
+     fe8:	30 e0       	ldi	r19, 0x00	; 0
+     fea:	80 91 37 04 	lds	r24, 0x0437
+     fee:	48 2f       	mov	r20, r24
+     ff0:	50 e0       	ldi	r21, 0x00	; 0
+     ff2:	c9 01       	movw	r24, r18
+     ff4:	88 0f       	add	r24, r24
+     ff6:	99 1f       	adc	r25, r25
+     ff8:	82 0f       	add	r24, r18
+     ffa:	93 1f       	adc	r25, r19
+     ffc:	88 0f       	add	r24, r24
+     ffe:	99 1f       	adc	r25, r25
+    1000:	84 0f       	add	r24, r20
+    1002:	95 1f       	adc	r25, r21
+    1004:	fc 01       	movw	r30, r24
+    1006:	ef 56       	subi	r30, 0x6F	; 111
+    1008:	fb 4f       	sbci	r31, 0xFB	; 251
+    100a:	80 81       	ld	r24, Z
+    100c:	80 5d       	subi	r24, 0xD0	; 208
+    100e:	8c 93       	st	X, r24
+										password_idx++;
+    1010:	80 91 37 04 	lds	r24, 0x0437
+    1014:	8f 5f       	subi	r24, 0xFF	; 255
+    1016:	80 93 37 04 	sts	0x0437, r24
+									}
+									j++;
+    101a:	80 91 49 04 	lds	r24, 0x0449
+    101e:	90 91 4a 04 	lds	r25, 0x044A
+    1022:	01 96       	adiw	r24, 0x01	; 1
+    1024:	90 93 4a 04 	sts	0x044A, r25
+    1028:	80 93 49 04 	sts	0x0449, r24
+    102c:	42 c0       	rjmp	.+132    	; 0x10b2 <__vector_19+0xb62>
+								}
+							}
+							else // 사물함이 비어있거나 잠겨 있으면 출력 X
+								locker_idx++;
+    102e:	80 91 29 04 	lds	r24, 0x0429
+    1032:	8f 5f       	subi	r24, 0xFF	; 255
+    1034:	80 93 29 04 	sts	0x0429, r24
+    1038:	3c c0       	rjmp	.+120    	; 0x10b2 <__vector_19+0xb62>
+						}
+					}
+					else // 관리자모드 내부 문자열 출력
+						UDR0 = in_manager[i++];
+    103a:	ac e2       	ldi	r26, 0x2C	; 44
+    103c:	b0 e0       	ldi	r27, 0x00	; 0
+    103e:	20 91 47 04 	lds	r18, 0x0447
+    1042:	30 91 48 04 	lds	r19, 0x0448
+    1046:	f9 01       	movw	r30, r18
+    1048:	e4 56       	subi	r30, 0x64	; 100
+    104a:	fd 4f       	sbci	r31, 0xFD	; 253
+    104c:	80 81       	ld	r24, Z
+    104e:	8c 93       	st	X, r24
+    1050:	c9 01       	movw	r24, r18
+    1052:	01 96       	adiw	r24, 0x01	; 1
+    1054:	90 93 48 04 	sts	0x0448, r25
+    1058:	80 93 47 04 	sts	0x0447, r24
+    105c:	2a c0       	rjmp	.+84     	; 0x10b2 <__vector_19+0xb62>
+				}
+				else // 관리자 비밀번호 다름
+				{
+					if(manager_password_wrong[i] == '\0')
+    105e:	80 91 47 04 	lds	r24, 0x0447
+    1062:	90 91 48 04 	lds	r25, 0x0448
+    1066:	fc 01       	movw	r30, r24
+    1068:	e3 50       	subi	r30, 0x03	; 3
+    106a:	fc 4f       	sbci	r31, 0xFC	; 252
+    106c:	80 81       	ld	r24, Z
+    106e:	88 23       	and	r24, r24
+    1070:	79 f4       	brne	.+30     	; 0x1090 <__vector_19+0xb40>
+				    {
+			            UDR0 = '\a';
+    1072:	ec e2       	ldi	r30, 0x2C	; 44
+    1074:	f0 e0       	ldi	r31, 0x00	; 0
+    1076:	87 e0       	ldi	r24, 0x07	; 7
+    1078:	80 83       	st	Z, r24
+			            UCSR0B = 0xD8;
+    107a:	ea e2       	ldi	r30, 0x2A	; 42
+    107c:	f0 e0       	ldi	r31, 0x00	; 0
+    107e:	88 ed       	ldi	r24, 0xD8	; 216
+    1080:	80 83       	st	Z, r24
+					    i = 0; manager_password_idx = 0;
+    1082:	10 92 48 04 	sts	0x0448, r1
+    1086:	10 92 47 04 	sts	0x0447, r1
+    108a:	10 92 38 04 	sts	0x0438, r1
+    108e:	11 c0       	rjmp	.+34     	; 0x10b2 <__vector_19+0xb62>
+					}
+					else
+					   	UDR0 = manager_password_wrong[i++];
+    1090:	ac e2       	ldi	r26, 0x2C	; 44
+    1092:	b0 e0       	ldi	r27, 0x00	; 0
+    1094:	20 91 47 04 	lds	r18, 0x0447
+    1098:	30 91 48 04 	lds	r19, 0x0448
+    109c:	f9 01       	movw	r30, r18
+    109e:	e3 50       	subi	r30, 0x03	; 3
+    10a0:	fc 4f       	sbci	r31, 0xFC	; 252
+    10a2:	80 81       	ld	r24, Z
+    10a4:	8c 93       	st	X, r24
+    10a6:	c9 01       	movw	r24, r18
+    10a8:	01 96       	adiw	r24, 0x01	; 1
+    10aa:	90 93 48 04 	sts	0x0448, r25
+    10ae:	80 93 47 04 	sts	0x0447, r24
+				}
+			}
+		}
+	}
+}
+    10b2:	cf 91       	pop	r28
+    10b4:	df 91       	pop	r29
+    10b6:	ff 91       	pop	r31
+    10b8:	ef 91       	pop	r30
+    10ba:	bf 91       	pop	r27
+    10bc:	af 91       	pop	r26
+    10be:	9f 91       	pop	r25
+    10c0:	8f 91       	pop	r24
+    10c2:	7f 91       	pop	r23
+    10c4:	6f 91       	pop	r22
+    10c6:	5f 91       	pop	r21
+    10c8:	4f 91       	pop	r20
+    10ca:	3f 91       	pop	r19
+    10cc:	2f 91       	pop	r18
+    10ce:	0f 90       	pop	r0
+    10d0:	00 92 5b 00 	sts	0x005B, r0
+    10d4:	0f 90       	pop	r0
+    10d6:	0f be       	out	0x3f, r0	; 63
+    10d8:	0f 90       	pop	r0
+    10da:	1f 90       	pop	r1
+    10dc:	18 95       	reti
+
+000010de <__vector_20>:
+SIGNAL(SIG_UART0_TRANS) // UDR TxC Interrupt : 송신 완료 시 사용
+{ // TxC Flag가 자동적으로 1에서 0이됨 (TxC 0, UDRE 1)
+    10de:	1f 92       	push	r1
+    10e0:	0f 92       	push	r0
+    10e2:	0f b6       	in	r0, 0x3f	; 63
+    10e4:	0f 92       	push	r0
+    10e6:	00 90 5b 00 	lds	r0, 0x005B
+    10ea:	0f 92       	push	r0
+    10ec:	11 24       	eor	r1, r1
+    10ee:	8f 93       	push	r24
+    10f0:	9f 93       	push	r25
+    10f2:	ef 93       	push	r30
+    10f4:	ff 93       	push	r31
+    10f6:	df 93       	push	r29
+    10f8:	cf 93       	push	r28
+    10fa:	0f 92       	push	r0
+    10fc:	cd b7       	in	r28, 0x3d	; 61
+    10fe:	de b7       	in	r29, 0x3e	; 62
+	char status = UCSR0A;
+    1100:	eb e2       	ldi	r30, 0x2B	; 43
+    1102:	f0 e0       	ldi	r31, 0x00	; 0
+    1104:	80 81       	ld	r24, Z
+    1106:	89 83       	std	Y+1, r24	; 0x01
+	if((status & 0x60) != 0x20) // TxC 0 , UDRE 1이 아니면
+    1108:	89 81       	ldd	r24, Y+1	; 0x01
+    110a:	88 2f       	mov	r24, r24
+    110c:	90 e0       	ldi	r25, 0x00	; 0
+    110e:	80 76       	andi	r24, 0x60	; 96
+    1110:	90 70       	andi	r25, 0x00	; 0
+    1112:	80 32       	cpi	r24, 0x20	; 32
+    1114:	91 05       	cpc	r25, r1
+    1116:	19 f0       	breq	.+6      	; 0x111e <__stack+0x1f>
+		usart0_tx_error = 1;
+    1118:	81 e0       	ldi	r24, 0x01	; 1
+    111a:	80 93 2f 04 	sts	0x042F, r24
+}
+    111e:	0f 90       	pop	r0
+    1120:	cf 91       	pop	r28
+    1122:	df 91       	pop	r29
+    1124:	ff 91       	pop	r31
+    1126:	ef 91       	pop	r30
+    1128:	9f 91       	pop	r25
+    112a:	8f 91       	pop	r24
+    112c:	0f 90       	pop	r0
+    112e:	00 92 5b 00 	sts	0x005B, r0
+    1132:	0f 90       	pop	r0
+    1134:	0f be       	out	0x3f, r0	; 63
+    1136:	0f 90       	pop	r0
+    1138:	1f 90       	pop	r1
+    113a:	18 95       	reti
+
+0000113c <__vector_18>:
+
+SIGNAL(SIG_UART0_RECV) // UDR RxC Interrupt : 수신 완료 시 사용
+{
+    113c:	1f 92       	push	r1
+    113e:	0f 92       	push	r0
+    1140:	0f b6       	in	r0, 0x3f	; 63
+    1142:	0f 92       	push	r0
+    1144:	00 90 5b 00 	lds	r0, 0x005B
+    1148:	0f 92       	push	r0
+    114a:	11 24       	eor	r1, r1
+    114c:	8f 93       	push	r24
+    114e:	9f 93       	push	r25
+    1150:	ef 93       	push	r30
+    1152:	ff 93       	push	r31
+    1154:	df 93       	push	r29
+    1156:	cf 93       	push	r28
+    1158:	00 d0       	rcall	.+0      	; 0x115a <__vector_18+0x1e>
+    115a:	cd b7       	in	r28, 0x3d	; 61
+    115c:	de b7       	in	r29, 0x3e	; 62
+    char status, data;
+    status = UCSR0A;
+    115e:	eb e2       	ldi	r30, 0x2B	; 43
+    1160:	f0 e0       	ldi	r31, 0x00	; 0
+    1162:	80 81       	ld	r24, Z
+    1164:	8a 83       	std	Y+2, r24	; 0x02
+    data = UDR0;
+    1166:	ec e2       	ldi	r30, 0x2C	; 44
+    1168:	f0 e0       	ldi	r31, 0x00	; 0
+    116a:	80 81       	ld	r24, Z
+    116c:	89 83       	std	Y+1, r24	; 0x01
+    
+    if((status & (FRAMING_ERROR | PARITY_ERROR | DATA_OVERRUN)) == 0) 
+    116e:	8a 81       	ldd	r24, Y+2	; 0x02
+    1170:	88 2f       	mov	r24, r24
+    1172:	90 e0       	ldi	r25, 0x00	; 0
+    1174:	8c 71       	andi	r24, 0x1C	; 28
+    1176:	90 70       	andi	r25, 0x00	; 0
+    1178:	00 97       	sbiw	r24, 0x00	; 0
+    117a:	31 f4       	brne	.+12     	; 0x1188 <__vector_18+0x4c>
+	{
+        usart0_rx_data = data;
+    117c:	89 81       	ldd	r24, Y+1	; 0x01
+    117e:	80 93 53 04 	sts	0x0453, r24
+        usart0_rx_eflg = 1;
+    1182:	81 e0       	ldi	r24, 0x01	; 1
+    1184:	80 93 2b 04 	sts	0x042B, r24
+    }
+}
+    1188:	0f 90       	pop	r0
+    118a:	0f 90       	pop	r0
+    118c:	cf 91       	pop	r28
+    118e:	df 91       	pop	r29
+    1190:	ff 91       	pop	r31
+    1192:	ef 91       	pop	r30
+    1194:	9f 91       	pop	r25
+    1196:	8f 91       	pop	r24
+    1198:	0f 90       	pop	r0
+    119a:	00 92 5b 00 	sts	0x005B, r0
+    119e:	0f 90       	pop	r0
+    11a0:	0f be       	out	0x3f, r0	; 63
+    11a2:	0f 90       	pop	r0
+    11a4:	1f 90       	pop	r1
+    11a6:	18 95       	reti
+
+000011a8 <__vector_9>:
+
+SIGNAL(SIG_OUTPUT_COMPARE2)
+{
+    11a8:	1f 92       	push	r1
+    11aa:	0f 92       	push	r0
+    11ac:	0f b6       	in	r0, 0x3f	; 63
+    11ae:	0f 92       	push	r0
+    11b0:	11 24       	eor	r1, r1
+    11b2:	2f 93       	push	r18
+    11b4:	8f 93       	push	r24
+    11b6:	9f 93       	push	r25
+    11b8:	df 93       	push	r29
+    11ba:	cf 93       	push	r28
+    11bc:	cd b7       	in	r28, 0x3d	; 61
+    11be:	de b7       	in	r29, 0x3e	; 62
+
+	if( t < 2004 ) t++; // 1주기(1msec)에 2씩증가 t가 2000에 가까울 때 1초
+    11c0:	80 91 45 04 	lds	r24, 0x0445
+    11c4:	90 91 46 04 	lds	r25, 0x0446
+    11c8:	27 e0       	ldi	r18, 0x07	; 7
+    11ca:	84 3d       	cpi	r24, 0xD4	; 212
+    11cc:	92 07       	cpc	r25, r18
+    11ce:	54 f4       	brge	.+20     	; 0x11e4 <__vector_9+0x3c>
+    11d0:	80 91 45 04 	lds	r24, 0x0445
+    11d4:	90 91 46 04 	lds	r25, 0x0446
+    11d8:	01 96       	adiw	r24, 0x01	; 1
+    11da:	90 93 46 04 	sts	0x0446, r25
+    11de:	80 93 45 04 	sts	0x0445, r24
+    11e2:	0d c0       	rjmp	.+26     	; 0x11fe <__vector_9+0x56>
+	else 
+	{
+	 	t = 0;
+    11e4:	10 92 46 04 	sts	0x0446, r1
+    11e8:	10 92 45 04 	sts	0x0445, r1
+		current_seconds++;
+    11ec:	80 91 39 04 	lds	r24, 0x0439
+    11f0:	90 91 3a 04 	lds	r25, 0x043A
+    11f4:	01 96       	adiw	r24, 0x01	; 1
+    11f6:	90 93 3a 04 	sts	0x043A, r25
+    11fa:	80 93 39 04 	sts	0x0439, r24
+	}
+		
+}
+    11fe:	cf 91       	pop	r28
+    1200:	df 91       	pop	r29
+    1202:	9f 91       	pop	r25
+    1204:	8f 91       	pop	r24
+    1206:	2f 91       	pop	r18
+    1208:	0f 90       	pop	r0
+    120a:	0f be       	out	0x3f, r0	; 63
+    120c:	0f 90       	pop	r0
+    120e:	1f 90       	pop	r1
+    1210:	18 95       	reti
+
+00001212 <__vector_10>:
+
+SIGNAL(SIG_OVERFLOW2)
+{
+    1212:	1f 92       	push	r1
+    1214:	0f 92       	push	r0
+    1216:	0f b6       	in	r0, 0x3f	; 63
+    1218:	0f 92       	push	r0
+    121a:	11 24       	eor	r1, r1
+    121c:	2f 93       	push	r18
+    121e:	8f 93       	push	r24
+    1220:	9f 93       	push	r25
+    1222:	df 93       	push	r29
+    1224:	cf 93       	push	r28
+    1226:	cd b7       	in	r28, 0x3d	; 61
+    1228:	de b7       	in	r29, 0x3e	; 62
+
+	if( t < 2004 ) t++; 
+    122a:	80 91 45 04 	lds	r24, 0x0445
+    122e:	90 91 46 04 	lds	r25, 0x0446
+    1232:	27 e0       	ldi	r18, 0x07	; 7
+    1234:	84 3d       	cpi	r24, 0xD4	; 212
+    1236:	92 07       	cpc	r25, r18
+    1238:	54 f4       	brge	.+20     	; 0x124e <__vector_10+0x3c>
+    123a:	80 91 45 04 	lds	r24, 0x0445
+    123e:	90 91 46 04 	lds	r25, 0x0446
+    1242:	01 96       	adiw	r24, 0x01	; 1
+    1244:	90 93 46 04 	sts	0x0446, r25
+    1248:	80 93 45 04 	sts	0x0445, r24
+    124c:	0d c0       	rjmp	.+26     	; 0x1268 <__vector_10+0x56>
+	else 
+	{
+	 	t = 0;
+    124e:	10 92 46 04 	sts	0x0446, r1
+    1252:	10 92 45 04 	sts	0x0445, r1
+		current_seconds++;
+    1256:	80 91 39 04 	lds	r24, 0x0439
+    125a:	90 91 3a 04 	lds	r25, 0x043A
+    125e:	01 96       	adiw	r24, 0x01	; 1
+    1260:	90 93 3a 04 	sts	0x043A, r25
+    1264:	80 93 39 04 	sts	0x0439, r24
+	}
+		
+}
+    1268:	cf 91       	pop	r28
+    126a:	df 91       	pop	r29
+    126c:	9f 91       	pop	r25
+    126e:	8f 91       	pop	r24
+    1270:	2f 91       	pop	r18
+    1272:	0f 90       	pop	r0
+    1274:	0f be       	out	0x3f, r0	; 63
+    1276:	0f 90       	pop	r0
+    1278:	1f 90       	pop	r1
+    127a:	18 95       	reti
+
+0000127c <set_mode>:
+
+
+void set_mode(char mode_name)
+{//mode_name외 나머지 mode flag 0 
+    127c:	df 93       	push	r29
+    127e:	cf 93       	push	r28
+    1280:	0f 92       	push	r0
+    1282:	cd b7       	in	r28, 0x3d	; 61
+    1284:	de b7       	in	r29, 0x3e	; 62
+    1286:	89 83       	std	Y+1, r24	; 0x01
+  menu_mode = keep_mode = find_mode = manager_mode = enterpass_mode = 0;
+    1288:	10 92 36 04 	sts	0x0436, r1
+    128c:	80 91 36 04 	lds	r24, 0x0436
+    1290:	80 93 35 04 	sts	0x0435, r24
+    1294:	80 91 35 04 	lds	r24, 0x0435
+    1298:	80 93 34 04 	sts	0x0434, r24
+    129c:	80 91 34 04 	lds	r24, 0x0434
+    12a0:	80 93 33 04 	sts	0x0433, r24
+    12a4:	80 91 33 04 	lds	r24, 0x0433
+    12a8:	80 93 31 04 	sts	0x0431, r24
+
+	if(mode_name == MENU_MODE) 
+    12ac:	89 81       	ldd	r24, Y+1	; 0x01
+    12ae:	88 23       	and	r24, r24
+    12b0:	21 f4       	brne	.+8      	; 0x12ba <set_mode+0x3e>
+    	menu_mode = 1;
+    12b2:	81 e0       	ldi	r24, 0x01	; 1
+    12b4:	80 93 31 04 	sts	0x0431, r24
+    12b8:	14 c0       	rjmp	.+40     	; 0x12e2 <set_mode+0x66>
+  	else if(mode_name == KEEP_MODE)
+    12ba:	89 81       	ldd	r24, Y+1	; 0x01
+    12bc:	81 30       	cpi	r24, 0x01	; 1
+    12be:	21 f4       	brne	.+8      	; 0x12c8 <set_mode+0x4c>
+    	keep_mode = 1;
+    12c0:	81 e0       	ldi	r24, 0x01	; 1
+    12c2:	80 93 33 04 	sts	0x0433, r24
+    12c6:	0d c0       	rjmp	.+26     	; 0x12e2 <set_mode+0x66>
+	else if(mode_name == FIND_MODE)
+    12c8:	89 81       	ldd	r24, Y+1	; 0x01
+    12ca:	82 30       	cpi	r24, 0x02	; 2
+    12cc:	21 f4       	brne	.+8      	; 0x12d6 <set_mode+0x5a>
+   		find_mode = 1;
+    12ce:	81 e0       	ldi	r24, 0x01	; 1
+    12d0:	80 93 34 04 	sts	0x0434, r24
+    12d4:	06 c0       	rjmp	.+12     	; 0x12e2 <set_mode+0x66>
+	else if(mode_name == MANAGER_MODE)
+    12d6:	89 81       	ldd	r24, Y+1	; 0x01
+    12d8:	83 30       	cpi	r24, 0x03	; 3
+    12da:	19 f4       	brne	.+6      	; 0x12e2 <set_mode+0x66>
+   		manager_mode = 1;
+    12dc:	81 e0       	ldi	r24, 0x01	; 1
+    12de:	80 93 35 04 	sts	0x0435, r24
+}
+    12e2:	0f 90       	pop	r0
+    12e4:	cf 91       	pop	r28
+    12e6:	df 91       	pop	r29
+    12e8:	08 95       	ret
+
+000012ea <password_is_same>:
+
+char password_is_same()
+{// 선택한 사물함에 대한 비밀번호가 입력한 비밀번호와 같은지 확인
+    12ea:	df 93       	push	r29
+    12ec:	cf 93       	push	r28
+    12ee:	00 d0       	rcall	.+0      	; 0x12f0 <password_is_same+0x6>
+    12f0:	00 d0       	rcall	.+0      	; 0x12f2 <password_is_same+0x8>
+    12f2:	0f 92       	push	r0
+    12f4:	cd b7       	in	r28, 0x3d	; 61
+    12f6:	de b7       	in	r29, 0x3e	; 62
+	if(manager_mode)
+    12f8:	80 91 35 04 	lds	r24, 0x0435
+    12fc:	88 23       	and	r24, r24
+    12fe:	f1 f0       	breq	.+60     	; 0x133c <password_is_same+0x52>
+	{// 관리자 비밀번호
+		for(int i = 0 ; i < 6; i++)
+    1300:	1c 82       	std	Y+4, r1	; 0x04
+    1302:	1b 82       	std	Y+3, r1	; 0x03
+    1304:	15 c0       	rjmp	.+42     	; 0x1330 <password_is_same+0x46>
+		{
+			if(manager_password[i] != find_manager_password[i]) 
+    1306:	8b 81       	ldd	r24, Y+3	; 0x03
+    1308:	9c 81       	ldd	r25, Y+4	; 0x04
+    130a:	fc 01       	movw	r30, r24
+    130c:	e0 50       	subi	r30, 0x00	; 0
+    130e:	ff 4f       	sbci	r31, 0xFF	; 255
+    1310:	20 81       	ld	r18, Z
+    1312:	8b 81       	ldd	r24, Y+3	; 0x03
+    1314:	9c 81       	ldd	r25, Y+4	; 0x04
+    1316:	fc 01       	movw	r30, r24
+    1318:	e3 5b       	subi	r30, 0xB3	; 179
+    131a:	fb 4f       	sbci	r31, 0xFB	; 251
+    131c:	80 81       	ld	r24, Z
+    131e:	28 17       	cp	r18, r24
+    1320:	11 f0       	breq	.+4      	; 0x1326 <password_is_same+0x3c>
+				return 0; // 비밀번호가 다름
+    1322:	1d 82       	std	Y+5, r1	; 0x05
+    1324:	44 c0       	rjmp	.+136    	; 0x13ae <password_is_same+0xc4>
+
+char password_is_same()
+{// 선택한 사물함에 대한 비밀번호가 입력한 비밀번호와 같은지 확인
+	if(manager_mode)
+	{// 관리자 비밀번호
+		for(int i = 0 ; i < 6; i++)
+    1326:	8b 81       	ldd	r24, Y+3	; 0x03
+    1328:	9c 81       	ldd	r25, Y+4	; 0x04
+    132a:	01 96       	adiw	r24, 0x01	; 1
+    132c:	9c 83       	std	Y+4, r25	; 0x04
+    132e:	8b 83       	std	Y+3, r24	; 0x03
+    1330:	8b 81       	ldd	r24, Y+3	; 0x03
+    1332:	9c 81       	ldd	r25, Y+4	; 0x04
+    1334:	86 30       	cpi	r24, 0x06	; 6
+    1336:	91 05       	cpc	r25, r1
+    1338:	34 f3       	brlt	.-52     	; 0x1306 <password_is_same+0x1c>
+    133a:	37 c0       	rjmp	.+110    	; 0x13aa <password_is_same+0xc0>
+				return 0; // 비밀번호가 다름
+		}
+	}
+	else
+	{// 일반 비밀번호
+		for(int i = 0 ; i < 6; i++)
+    133c:	1a 82       	std	Y+2, r1	; 0x02
+    133e:	19 82       	std	Y+1, r1	; 0x01
+    1340:	2f c0       	rjmp	.+94     	; 0x13a0 <password_is_same+0xb6>
+		{
+			if(locker_password[selected_locker][i] != find_locker_password[selected_locker][i]) 
+    1342:	80 91 54 04 	lds	r24, 0x0454
+    1346:	28 2f       	mov	r18, r24
+    1348:	30 e0       	ldi	r19, 0x00	; 0
+    134a:	49 81       	ldd	r20, Y+1	; 0x01
+    134c:	5a 81       	ldd	r21, Y+2	; 0x02
+    134e:	c9 01       	movw	r24, r18
+    1350:	88 0f       	add	r24, r24
+    1352:	99 1f       	adc	r25, r25
+    1354:	82 0f       	add	r24, r18
+    1356:	93 1f       	adc	r25, r19
+    1358:	88 0f       	add	r24, r24
+    135a:	99 1f       	adc	r25, r25
+    135c:	84 0f       	add	r24, r20
+    135e:	95 1f       	adc	r25, r21
+    1360:	fc 01       	movw	r30, r24
+    1362:	ef 56       	subi	r30, 0x6F	; 111
+    1364:	fb 4f       	sbci	r31, 0xFB	; 251
+    1366:	60 81       	ld	r22, Z
+    1368:	80 91 54 04 	lds	r24, 0x0454
+    136c:	28 2f       	mov	r18, r24
+    136e:	30 e0       	ldi	r19, 0x00	; 0
+    1370:	49 81       	ldd	r20, Y+1	; 0x01
+    1372:	5a 81       	ldd	r21, Y+2	; 0x02
+    1374:	c9 01       	movw	r24, r18
+    1376:	88 0f       	add	r24, r24
+    1378:	99 1f       	adc	r25, r25
+    137a:	82 0f       	add	r24, r18
+    137c:	93 1f       	adc	r25, r19
+    137e:	88 0f       	add	r24, r24
+    1380:	99 1f       	adc	r25, r25
+    1382:	84 0f       	add	r24, r20
+    1384:	95 1f       	adc	r25, r21
+    1386:	fc 01       	movw	r30, r24
+    1388:	eb 5a       	subi	r30, 0xAB	; 171
+    138a:	fb 4f       	sbci	r31, 0xFB	; 251
+    138c:	80 81       	ld	r24, Z
+    138e:	68 17       	cp	r22, r24
+    1390:	11 f0       	breq	.+4      	; 0x1396 <password_is_same+0xac>
+				return 0; // 비밀번호가 다름
+    1392:	1d 82       	std	Y+5, r1	; 0x05
+    1394:	0c c0       	rjmp	.+24     	; 0x13ae <password_is_same+0xc4>
+				return 0; // 비밀번호가 다름
+		}
+	}
+	else
+	{// 일반 비밀번호
+		for(int i = 0 ; i < 6; i++)
+    1396:	89 81       	ldd	r24, Y+1	; 0x01
+    1398:	9a 81       	ldd	r25, Y+2	; 0x02
+    139a:	01 96       	adiw	r24, 0x01	; 1
+    139c:	9a 83       	std	Y+2, r25	; 0x02
+    139e:	89 83       	std	Y+1, r24	; 0x01
+    13a0:	89 81       	ldd	r24, Y+1	; 0x01
+    13a2:	9a 81       	ldd	r25, Y+2	; 0x02
+    13a4:	86 30       	cpi	r24, 0x06	; 6
+    13a6:	91 05       	cpc	r25, r1
+    13a8:	64 f2       	brlt	.-104    	; 0x1342 <password_is_same+0x58>
+		{
+			if(locker_password[selected_locker][i] != find_locker_password[selected_locker][i]) 
+				return 0; // 비밀번호가 다름
+		}
+	}
+	return 1; // 비밀번호가 같음 
+    13aa:	81 e0       	ldi	r24, 0x01	; 1
+    13ac:	8d 83       	std	Y+5, r24	; 0x05
+    13ae:	8d 81       	ldd	r24, Y+5	; 0x05
+}
+    13b0:	0f 90       	pop	r0
+    13b2:	0f 90       	pop	r0
+    13b4:	0f 90       	pop	r0
+    13b6:	0f 90       	pop	r0
+    13b8:	0f 90       	pop	r0
+    13ba:	cf 91       	pop	r28
+    13bc:	df 91       	pop	r29
+    13be:	08 95       	ret
+
+000013c0 <divide_seconds>:
+
+void divide_seconds(int seconds) 
+{//초를 분과 초로 나누고 분과 초를 자릿수 별로 나눔
+    13c0:	df 93       	push	r29
+    13c2:	cf 93       	push	r28
+    13c4:	00 d0       	rcall	.+0      	; 0x13c6 <divide_seconds+0x6>
+    13c6:	00 d0       	rcall	.+0      	; 0x13c8 <divide_seconds+0x8>
+    13c8:	00 d0       	rcall	.+0      	; 0x13ca <divide_seconds+0xa>
+    13ca:	cd b7       	in	r28, 0x3d	; 61
+    13cc:	de b7       	in	r29, 0x3e	; 62
+    13ce:	9e 83       	std	Y+6, r25	; 0x06
+    13d0:	8d 83       	std	Y+5, r24	; 0x05
+    int minutes = seconds / 60;
+    13d2:	8d 81       	ldd	r24, Y+5	; 0x05
+    13d4:	9e 81       	ldd	r25, Y+6	; 0x06
+    13d6:	2c e3       	ldi	r18, 0x3C	; 60
+    13d8:	30 e0       	ldi	r19, 0x00	; 0
+    13da:	b9 01       	movw	r22, r18
+    13dc:	0e 94 5e 0a 	call	0x14bc	; 0x14bc <__divmodhi4>
+    13e0:	cb 01       	movw	r24, r22
+    13e2:	9c 83       	std	Y+4, r25	; 0x04
+    13e4:	8b 83       	std	Y+3, r24	; 0x03
+    int remaining_seconds = seconds % 60;
+    13e6:	8d 81       	ldd	r24, Y+5	; 0x05
+    13e8:	9e 81       	ldd	r25, Y+6	; 0x06
+    13ea:	2c e3       	ldi	r18, 0x3C	; 60
+    13ec:	30 e0       	ldi	r19, 0x00	; 0
+    13ee:	b9 01       	movw	r22, r18
+    13f0:	0e 94 5e 0a 	call	0x14bc	; 0x14bc <__divmodhi4>
+    13f4:	9a 83       	std	Y+2, r25	; 0x02
+    13f6:	89 83       	std	Y+1, r24	; 0x01
+	
+	tens_minutes = minutes / 10;
+    13f8:	8b 81       	ldd	r24, Y+3	; 0x03
+    13fa:	9c 81       	ldd	r25, Y+4	; 0x04
+    13fc:	2a e0       	ldi	r18, 0x0A	; 10
+    13fe:	30 e0       	ldi	r19, 0x00	; 0
+    1400:	b9 01       	movw	r22, r18
+    1402:	0e 94 5e 0a 	call	0x14bc	; 0x14bc <__divmodhi4>
+    1406:	cb 01       	movw	r24, r22
+    1408:	90 93 3e 04 	sts	0x043E, r25
+    140c:	80 93 3d 04 	sts	0x043D, r24
+	ones_minutes = minutes % 10;
+    1410:	8b 81       	ldd	r24, Y+3	; 0x03
+    1412:	9c 81       	ldd	r25, Y+4	; 0x04
+    1414:	2a e0       	ldi	r18, 0x0A	; 10
+    1416:	30 e0       	ldi	r19, 0x00	; 0
+    1418:	b9 01       	movw	r22, r18
+    141a:	0e 94 5e 0a 	call	0x14bc	; 0x14bc <__divmodhi4>
+    141e:	90 93 40 04 	sts	0x0440, r25
+    1422:	80 93 3f 04 	sts	0x043F, r24
+    tens_seconds = remaining_seconds / 10;
+    1426:	89 81       	ldd	r24, Y+1	; 0x01
+    1428:	9a 81       	ldd	r25, Y+2	; 0x02
+    142a:	2a e0       	ldi	r18, 0x0A	; 10
+    142c:	30 e0       	ldi	r19, 0x00	; 0
+    142e:	b9 01       	movw	r22, r18
+    1430:	0e 94 5e 0a 	call	0x14bc	; 0x14bc <__divmodhi4>
+    1434:	cb 01       	movw	r24, r22
+    1436:	90 93 42 04 	sts	0x0442, r25
+    143a:	80 93 41 04 	sts	0x0441, r24
+    ones_seconds = remaining_seconds % 10;
+    143e:	89 81       	ldd	r24, Y+1	; 0x01
+    1440:	9a 81       	ldd	r25, Y+2	; 0x02
+    1442:	2a e0       	ldi	r18, 0x0A	; 10
+    1444:	30 e0       	ldi	r19, 0x00	; 0
+    1446:	b9 01       	movw	r22, r18
+    1448:	0e 94 5e 0a 	call	0x14bc	; 0x14bc <__divmodhi4>
+    144c:	90 93 44 04 	sts	0x0444, r25
+    1450:	80 93 43 04 	sts	0x0443, r24
+}
+    1454:	26 96       	adiw	r28, 0x06	; 6
+    1456:	0f b6       	in	r0, 0x3f	; 63
+    1458:	f8 94       	cli
+    145a:	de bf       	out	0x3e, r29	; 62
+    145c:	0f be       	out	0x3f, r0	; 63
+    145e:	cd bf       	out	0x3d, r28	; 61
+    1460:	cf 91       	pop	r28
+    1462:	df 91       	pop	r29
+    1464:	08 95       	ret
+
+00001466 <timer_counter2_setup>:
+
+
+void timer_counter2_setup(void)
+{
+    1466:	df 93       	push	r29
+    1468:	cf 93       	push	r28
+    146a:	cd b7       	in	r28, 0x3d	; 61
+    146c:	de b7       	in	r29, 0x3e	; 62
+	TCCR2 = 0x6B; // Fast PWM mode, Clear on match , 256kHz -> 3.906nsec * 256 -> 1주기 1msec
+    146e:	e5 e4       	ldi	r30, 0x45	; 69
+    1470:	f0 e0       	ldi	r31, 0x00	; 0
+    1472:	8b e6       	ldi	r24, 0x6B	; 107
+    1474:	80 83       	st	Z, r24
+	OCR2 = 0x80; // 128(10) 
+    1476:	e3 e4       	ldi	r30, 0x43	; 67
+    1478:	f0 e0       	ldi	r31, 0x00	; 0
+    147a:	80 e8       	ldi	r24, 0x80	; 128
+    147c:	80 83       	st	Z, r24
+	DDRB = 0x80;
+    147e:	e7 e3       	ldi	r30, 0x37	; 55
+    1480:	f0 e0       	ldi	r31, 0x00	; 0
+    1482:	80 e8       	ldi	r24, 0x80	; 128
+    1484:	80 83       	st	Z, r24
+
+	TIMSK = 0xC0; // OCF, TOV interrupt enable
+    1486:	e7 e5       	ldi	r30, 0x57	; 87
+    1488:	f0 e0       	ldi	r31, 0x00	; 0
+    148a:	80 ec       	ldi	r24, 0xC0	; 192
+    148c:	80 83       	st	Z, r24
+	TCNT2 = 0;
+    148e:	e4 e4       	ldi	r30, 0x44	; 68
+    1490:	f0 e0       	ldi	r31, 0x00	; 0
+    1492:	10 82       	st	Z, r1
+}
+    1494:	cf 91       	pop	r28
+    1496:	df 91       	pop	r29
+    1498:	08 95       	ret
+
+0000149a <Ext_memory_setup>:
+
+void Ext_memory_setup(void)
+{
+    149a:	df 93       	push	r29
+    149c:	cf 93       	push	r28
+    149e:	cd b7       	in	r28, 0x3d	; 61
+    14a0:	de b7       	in	r29, 0x3e	; 62
+	MCUCR = 0x80;
+    14a2:	e5 e5       	ldi	r30, 0x55	; 85
+    14a4:	f0 e0       	ldi	r31, 0x00	; 0
+    14a6:	80 e8       	ldi	r24, 0x80	; 128
+    14a8:	80 83       	st	Z, r24
+	XMCRA = 0x00;
+    14aa:	ed e6       	ldi	r30, 0x6D	; 109
+    14ac:	f0 e0       	ldi	r31, 0x00	; 0
+    14ae:	10 82       	st	Z, r1
+	XMCRB = 0x00;
+    14b0:	ec e6       	ldi	r30, 0x6C	; 108
+    14b2:	f0 e0       	ldi	r31, 0x00	; 0
+    14b4:	10 82       	st	Z, r1
+}
+    14b6:	cf 91       	pop	r28
+    14b8:	df 91       	pop	r29
+    14ba:	08 95       	ret
+
+000014bc <__divmodhi4>:
+    14bc:	97 fb       	bst	r25, 7
+    14be:	09 2e       	mov	r0, r25
+    14c0:	07 26       	eor	r0, r23
+    14c2:	0a d0       	rcall	.+20     	; 0x14d8 <__divmodhi4_neg1>
+    14c4:	77 fd       	sbrc	r23, 7
+    14c6:	04 d0       	rcall	.+8      	; 0x14d0 <__divmodhi4_neg2>
+    14c8:	0c d0       	rcall	.+24     	; 0x14e2 <__udivmodhi4>
+    14ca:	06 d0       	rcall	.+12     	; 0x14d8 <__divmodhi4_neg1>
+    14cc:	00 20       	and	r0, r0
+    14ce:	1a f4       	brpl	.+6      	; 0x14d6 <__divmodhi4_exit>
+
+000014d0 <__divmodhi4_neg2>:
+    14d0:	70 95       	com	r23
+    14d2:	61 95       	neg	r22
+    14d4:	7f 4f       	sbci	r23, 0xFF	; 255
+
+000014d6 <__divmodhi4_exit>:
+    14d6:	08 95       	ret
+
+000014d8 <__divmodhi4_neg1>:
+    14d8:	f6 f7       	brtc	.-4      	; 0x14d6 <__divmodhi4_exit>
+    14da:	90 95       	com	r25
+    14dc:	81 95       	neg	r24
+    14de:	9f 4f       	sbci	r25, 0xFF	; 255
+    14e0:	08 95       	ret
+
+000014e2 <__udivmodhi4>:
+    14e2:	aa 1b       	sub	r26, r26
+    14e4:	bb 1b       	sub	r27, r27
+    14e6:	51 e1       	ldi	r21, 0x11	; 17
+    14e8:	07 c0       	rjmp	.+14     	; 0x14f8 <__udivmodhi4_ep>
+
+000014ea <__udivmodhi4_loop>:
+    14ea:	aa 1f       	adc	r26, r26
+    14ec:	bb 1f       	adc	r27, r27
+    14ee:	a6 17       	cp	r26, r22
+    14f0:	b7 07       	cpc	r27, r23
+    14f2:	10 f0       	brcs	.+4      	; 0x14f8 <__udivmodhi4_ep>
+    14f4:	a6 1b       	sub	r26, r22
+    14f6:	b7 0b       	sbc	r27, r23
+
+000014f8 <__udivmodhi4_ep>:
+    14f8:	88 1f       	adc	r24, r24
+    14fa:	99 1f       	adc	r25, r25
+    14fc:	5a 95       	dec	r21
+    14fe:	a9 f7       	brne	.-22     	; 0x14ea <__udivmodhi4_loop>
+    1500:	80 95       	com	r24
+    1502:	90 95       	com	r25
+    1504:	bc 01       	movw	r22, r24
+    1506:	cd 01       	movw	r24, r26
+    1508:	08 95       	ret
+
+0000150a <_exit>:
+    150a:	f8 94       	cli
+
+0000150c <__stop_program>:
+    150c:	ff cf       	rjmp	.-2      	; 0x150c <__stop_program>
